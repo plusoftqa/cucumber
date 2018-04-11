@@ -36,7 +36,6 @@
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>1.2.4</version>
-    <scope>test</scope>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
@@ -67,8 +66,8 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
     <version>2.3.1</version>
-    <scope>test</scope>
 </dependency>
+
 <dependency>
 <groupId>junit</groupId>
 <artifactId>junit</artifactId>
