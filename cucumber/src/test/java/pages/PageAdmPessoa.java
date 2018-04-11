@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.Assertion;
+
 
 import executar.Util;
 import locators.LocatorsAdmPessoa;
