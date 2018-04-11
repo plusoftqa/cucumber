@@ -1,8 +1,6 @@
 package steps_definition;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import pages.PageAdmPessoa;
 
 public class StepAdmPessoas{

@@ -169,20 +169,16 @@ public class PageUtilAdm extends LocatorsUtilADM{
 
 
 	
+	@SuppressWarnings("unused")
 	public void checkbox_Inativo() throws Exception {
 		if(true) {
 		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
         js.executeScript("document.getElementById('input-time_timetable-do_inactive').click()");
 		
-		} else {
-			JavascriptExecutor js = (JavascriptExecutor) Util.driver;
-	        js.executeScript("document.getElementById('input-time_timetable-do_inactive').click()");
-			 
-			
-		
-	
-		
-	}
+		} else  {
+			System.out.println("teste");
+		}
+
 		
 	}
 

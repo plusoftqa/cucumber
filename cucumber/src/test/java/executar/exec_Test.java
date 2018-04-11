@@ -1,7 +1,13 @@
 package executar;
 
  
+import java.io.File;
+import java.io.IOException;
+
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+
+import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -28,14 +34,18 @@ import cucumber.api.junit.Cucumber;
 							dryRun = false
 )
 
-public class exec_teste {
+
+public class exec_Test {
 	
+}
 
 
+
+//
 //	@AfterClass
 //	public static void writeExtentReport() throws IOException {
-	
-		
+//	
+//		
 //		Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
 //	    Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
 //	    Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
@@ -43,11 +53,7 @@ public class exec_teste {
 //	    Reporter.setSystemInfo("Selenium", "3.7.0");
 //	    Reporter.setSystemInfo("Maven", "3.5.2");
 //	    Reporter.setSystemInfo("Java Version", "1.8.0_151");
-	     
+//	     
+//
+//	    }	
 
-//	    }
-	
-	
-	
-
-}

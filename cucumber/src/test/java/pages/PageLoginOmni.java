@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -15,6 +14,7 @@ public class PageLoginOmni extends LocatorsLoginOmni{
 	static  executar.Util u = new executar.Util();
 	static String Browser = "C:\\Automacao\\browser\\";
 
+	@SuppressWarnings("deprecation")
 	public void abrirNavegador() {
 		System.setProperty("webdriver.chrome.driver", Browser
 				+ "chromedriver.exe");
@@ -29,8 +29,7 @@ public class PageLoginOmni extends LocatorsLoginOmni{
 		  
 		       capabilities.setCapability("chrome.prefs", chromePreferences);
 		
-
-		       executar.Util u = new executar.Util();
+		    //   Util u = new executar.Util();
 		Util.driver = new ChromeDriver(capabilities);
 		
 	      

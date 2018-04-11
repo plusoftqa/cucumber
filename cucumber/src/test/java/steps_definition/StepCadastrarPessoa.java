@@ -2,7 +2,6 @@ package steps_definition;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import executar.Util;
 import pages.PageCadastrarPessoa;
 
 public class StepCadastrarPessoa {

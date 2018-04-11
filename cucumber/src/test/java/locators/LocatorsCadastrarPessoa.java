@@ -9,7 +9,7 @@ public class LocatorsCadastrarPessoa {
 	protected By Novo = By.cssSelector("button[data-original-title='Novo'");
 	public By Gerar_protocolo = By.cssSelector("button[id='btn-save-ticket']");
 	public By mais = By.linkText("mais");
-	public By ocorrencia = By.linkText("Ocorrência");
+	public By ocorrencia = By.linkText("OcorrÃªncia");
 	
 	//Dados da pessoa
 	protected By nome_Razao_type = By.id("txt-person-name");

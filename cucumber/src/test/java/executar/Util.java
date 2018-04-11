@@ -1,17 +1,5 @@
 package executar;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import com.aventstack.extentreports.MediaEntityBuilder;
-
-import cucumber.api.Scenario;
-
 import java.awt.AWTException;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
@@ -27,8 +15,11 @@ import java.util.UUID;
 
 import javax.imageio.ImageIO;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Util {
 	
