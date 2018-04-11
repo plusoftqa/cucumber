@@ -52,6 +52,7 @@ public class Screenshot {
 	@After
 	
 		public void tearDown(Scenario scenario) {
+		System.out.println("teste");
 		String caminho = "C:\\Users\\amarinho\\eclipse-workspace\\cucumber\\target\\";
 		
 		//if (scenario.isFailed()) {
