@@ -48,17 +48,17 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "C:\\Users\\amarinho\\gitCucumber\\cucumber\\target\\";
+		String caminho = "/cucumber/target/image/";
 		
 		if (scenario.isFailed()) {
 		
 			File scrFile = ((TakesScreenshot)Util.driver).getScreenshotAs(OutputType.FILE);
 
-			try {
+			try {       
 			FileUtils.copyFile(scrFile, new File(caminho+scenario.getName()+".jpg"));
 			
 			InputStream screenshotStream = new FileInputStream(scrFile);
-			scenario.embed(IOUtils.toByteArray(screenshotStream), "target/jpeg");
+			scenario.embed(IOUtils.toByteArray(screenshotStream), "target/image/"+scenario.getName()+".jpg".toString());
 	        
 	        
 			Reporter.addScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString());
