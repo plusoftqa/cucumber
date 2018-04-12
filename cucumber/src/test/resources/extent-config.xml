@@ -24,7 +24,7 @@
     <!-- custom javascript -->
     <scripts>
       <![CDATA[
-        $(document).ready(function() {
+        <meta http-equiv="Content-Security-Policy" content="style-src 'self' http://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"> {
         
         });
       ]]>
