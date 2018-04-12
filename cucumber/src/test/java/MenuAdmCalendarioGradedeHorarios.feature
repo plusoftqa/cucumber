@@ -17,9 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Title of your feature
-  I want to use this template for my feature file
-
+Feature: Menu Administrativo Calendario Grade de horarios
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -37,7 +35,7 @@ Feature: Title of your feature
     
  @tag3
   Scenario: validar tela de busca
-    And Validar title "Grade de Horários"
+    And Validar title "Grade de Horï¿½rios"
 
     
   @tag4

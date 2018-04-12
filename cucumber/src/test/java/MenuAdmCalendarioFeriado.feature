@@ -17,8 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Menu Administrativo Calendario Feriado
 
   @tag1
   Scenario: Logar acessar Modulo Administrativo

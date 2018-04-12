@@ -21,7 +21,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( features = "src/test/java/MenuAdmCalendarioFeriado.feature",
+@CucumberOptions( features = "src/test/java/",
 					glue = { "" },
 					plugin = {
 						"pretty",

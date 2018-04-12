@@ -48,7 +48,7 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "/cucumber/target/image/";
+		String caminho = "/target/image/";
 		
 		if (scenario.isFailed()) {
 		
