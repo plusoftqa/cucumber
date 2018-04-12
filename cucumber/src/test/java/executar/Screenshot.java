@@ -58,7 +58,7 @@ public class Screenshot {
 			FileUtils.copyFile(scrFile, new File(caminho+scenario.getName()+".jpg"));
 			
 			InputStream screenshotStream = new FileInputStream(scrFile);
-			scenario.embed(IOUtils.toByteArray(screenshotStream), "target/image/"+scenario.getName()+".jpg".toString());
+			scenario.embed(IOUtils.toByteArray(screenshotStream), "/cucumber/target/image/"+scenario.getName()+".jpg".toString());
 	        
 	        
 			Reporter.addScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString());
