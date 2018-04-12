@@ -37,23 +37,25 @@ import cucumber.api.junit.Cucumber;
 
 public class exec_Test {
 	
+
+
+
+
+
+	@AfterClass
+	public static void writeExtentReport() throws IOException {
+	
+		
+		Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
+	    Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
+	    Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
+	    Reporter.setSystemInfo("Machine", 	"Windows 10" + "64 Bit");
+	    Reporter.setSystemInfo("Selenium", "3.7.0");
+	    Reporter.setSystemInfo("Maven", "3.5.2");
+	    Reporter.setSystemInfo("Java Version", "1.8.0_151");
+	     
+
+	    }	
+	
 }
-
-
-
-//
-//	@AfterClass
-//	public static void writeExtentReport() throws IOException {
-//	
-//		
-//		Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
-//	    Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
-//	    Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-//	    Reporter.setSystemInfo("Machine", 	"Windows 10" + "64 Bit");
-//	    Reporter.setSystemInfo("Selenium", "3.7.0");
-//	    Reporter.setSystemInfo("Maven", "3.5.2");
-//	    Reporter.setSystemInfo("Java Version", "1.8.0_151");
-//	     
-//
-//	    }	
 
