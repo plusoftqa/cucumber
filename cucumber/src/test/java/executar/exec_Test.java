@@ -21,19 +21,16 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( features = "src/test/java/",
+@CucumberOptions( features = "src/test/java/LoginOmni.feature",
 					glue = { "" },
 					plugin = {
 						"pretty",
 						"html:target/cucumber-htmlreport",
-						"html:target/selenium-reports",
 						"json:target/cucumber-report.json",
-						"com.cucumber.listener.ExtentCucumberFormatter:target/report.html"
-						},
-							monochrome = true,
-							dryRun = false
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html"
+						}
+				
 )
-
 
 public class exec_Test {
 	
