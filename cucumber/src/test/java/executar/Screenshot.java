@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.After;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -17,7 +18,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.cucumber.listener.Reporter;
 
 import cucumber.api.Scenario;
-import cucumber.api.java.After;
+
 
 
 
@@ -41,8 +42,7 @@ public class Screenshot {
 	
 	
 	
-	@After
-	
+	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
 		String caminho = "C:\\Users\\amarinho\\eclipse-workspace\\cucumber\\target\\";
