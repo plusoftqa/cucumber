@@ -48,7 +48,7 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "/target/image/";
+		String caminho = "C:\\Users\\amarinho\\.jenkins\\jobs\\Cucumberqa\\htmlreports\\Extent_HTML_Report\\";
 		
 		if (scenario.isFailed()) {
 		
