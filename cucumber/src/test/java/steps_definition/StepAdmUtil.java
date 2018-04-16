@@ -20,6 +20,13 @@ public class StepAdmUtil {
 	    // Write code here that turns the phrase above into concrete actions
 	    
 	}
+	
+	@Given("^Digitar no campo de busca v1 \"([^\"]*)\"$")
+	public void digitar_no_campo_de_busca_v1(String busca) throws Exception {
+		util.digitar_no_campo_de_busca_v1(busca);
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
 
 	
 	

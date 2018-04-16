@@ -56,12 +56,32 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	public void acessar_sub_menu(String submenu) throws Exception {
 		// TODO Auto-generated method stub
 		switch (submenu) {
+		//Menu Calendarios
 		case "Grade de horarios":
 			submenu = calendario_grade_de_horarios;
 			
 			break;
 		case "Feriados":
 			submenu = calendario_feriados;
+			break;
+			//Menu Usuarios
+		case "Grupos de usuario":
+			submenu = usuario_grupo_de_usuario;
+			break;
+		case "Times":
+			submenu = usuario_times;
+			break;
+		case "Departamentos":
+			submenu = usuario_departamentos;
+			break;
+		case "Usuarios":
+			submenu = usuario_usuarios;
+			break;
+		case "Provedores de acesso":
+			submenu = usuario_provedores_de_acesso;
+			break;
+		case "Seguranca":
+			submenu = usuario_seguranca;
 			break;
 
 		}
@@ -85,7 +105,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			by = By.cssSelector(salvar_e_novov1);
 			break;
 		case "Duplicarv1":
-			by = By.cssSelector(duplicarv1);
+			by = By.xpath(duplicarv1);
 			break;
 		case "Excluirv1":
 			by = By.xpath(removerv1);
@@ -101,6 +121,27 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			break;
 		case "Confirmarv1":
 			by = By.xpath(confirmarv1);
+			break;
+		case "Associar Modulo":
+			by = By.cssSelector(associarModuloGrupodeUsuarios);
+			break;
+		case "Associar Usuario":
+			by = By.cssSelector(associarUsuarioGrupodeusuario);
+			break;
+		case "Remover Modulo":
+			by = By.xpath(removerModuloGrupodeusuarios);
+			break;
+		case "Remover Usuario":
+			by = By.xpath(removerUsuarioGrupodeusuarios);
+			break;
+		case "Permissao":
+			by = By.xpath(permissao);
+			break;
+		case "Buscarv1":
+			by = By.cssSelector(buscarv1botao);
+			break;
+		case "Salvar v1 Modal":
+			by = By.xpath(salvarv1modal);
 			break;
 		}
 		
@@ -246,9 +287,21 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Thread.sleep(5000);
 		Util.driver.findElement(buscarv1).clear();
 		u.Digitar(buscarv1, busca);
+		Thread.sleep(9000);		
+		
+	}
+
+
+	public void digitar_no_campo_de_busca_v1(String busca) throws Exception {
+		Thread.sleep(5000);
+		Util.driver.findElement(buscarv1todos).clear();
+		u.Digitar(buscarv1todos, busca);
+		clicar_botao("Buscarv1");
+		Util.driver.switchTo().defaultContent();
+		Thread.sleep(3000);
+		Util.driver.switchTo().frame("frame_middle");
+		
+		
 		Thread.sleep(9000);
-		
-		
-		
 		
 	}}

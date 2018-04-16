@@ -150,12 +150,23 @@ public class LocatorsUtilADM {
 	protected String novov1 = "button[role='new']";
 	protected String salvar_e_novov1 = "button[role='save']";
 	protected String salvarv1 = "//*[@role='save'][2]";
-	protected String editarv1 = "//*[@class='table-row-actions']/span[1]/button[1]";
-	protected String removerv1_1 = "//*[@class='table-row-actions']/span[1]/button[2]";
+	protected String editarv1 = "//td[contains(@class,'table-row-actions')]/span[1]/button[1]";
+	protected String removerv1_1 = "//td[contains(@class,'table-row-actions')]/span[1]/button[2]";
 	protected String removerv1 = ".//*[@class='btn btn-danger']";
-	protected String duplicarv1 = "button[role='duplicate']";
+	protected String duplicarv1 = "//*[@class='btn btn-success']";
 	protected String cancelarv1 = "button[role='cancel']";
 	protected String confirmarv1 = "//*[@class='modal-content']/div[3]/button[2]";
+	protected String associarModuloGrupodeUsuarios = "button[id='btn-add-module']";
+	protected String associarUsuarioGrupodeusuario = "button[role='child-new']";
+	protected String removerModuloGrupodeusuarios = "//td//*[@role='dom-remove']";
+	protected String removerUsuarioGrupodeusuarios = "//td//*[@role='child-remove']";
+	protected String permissao = ".//*[@class='btn btn-warning']";
+	protected String buscarv1botao = "button[role='filter']";
+	protected String salvarv1modal = "//*[@class='modal-content']/div[3]/button[4]";
+	
+	
+	
+	
 	
 	//Tooltips
 	protected String printv1 = "a[title='Imprimir']";
@@ -167,6 +178,7 @@ public class LocatorsUtilADM {
 	
 	//Campo buscar
 	protected By buscarv1 = By.xpath("//*[@role='client-filter-field']");
+	protected By buscarv1todos = By.xpath("//input[@role='filter-field']");
 	
 	
 	
