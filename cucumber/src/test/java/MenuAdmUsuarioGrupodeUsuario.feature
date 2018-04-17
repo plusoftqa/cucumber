@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Calendario Grade de horarios
+Feature: Menu Administrativo Usuario > Grupo de usuarios
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
