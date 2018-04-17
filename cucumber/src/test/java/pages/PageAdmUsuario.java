@@ -35,6 +35,12 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 		u.selectMenuAdm(usuario_grupo_de_usuarios_select, usuarios);
 		
 	}
+	public void incluir_Time(String time) {
+		// TODO Auto-generated method stub
+		u.Digitar(time_times_type, time);
+		
+		
+	}
 	
 	
 

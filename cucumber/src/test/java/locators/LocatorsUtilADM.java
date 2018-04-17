@@ -163,6 +163,13 @@ public class LocatorsUtilADM {
 	protected String permissao = ".//*[@class='btn btn-warning']";
 	protected String buscarv1botao = "button[role='filter']";
 	protected String salvarv1modal = "//*[@class='modal-content']/div[3]/button[4]";
+	protected String novo = "button[aria-label='new']";
+	protected String cancelar = "button[aria-label='cancel']";
+	protected String mais = "button[aria-label='pageactions.more']";
+	protected String salvarenovo = "button[aria-label='savenew']";
+	protected String salvar = "button[aria-label='save']";
+	protected String remover = "button[aria-label='remove']";
+	protected String duplicar = "button[aria-label='duplicate']";
 	
 	
 	

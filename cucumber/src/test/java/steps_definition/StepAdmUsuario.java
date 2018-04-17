@@ -30,5 +30,12 @@ public class StepAdmUsuario {
 		usuario.selecionar_usuario_grupo_de_usuarios(usuarios);
 	    
 	}
+	
+	@And("^Incluir Time\"([^\"]*)\"$")
+	public void incluir_Time(String time) throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    usuario.incluir_Time(time);
+	}
+
 
 }

@@ -143,6 +143,9 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Salvar v1 Modal":
 			by = By.xpath(salvarv1modal);
 			break;
+		case "Novo":
+			by = By.cssSelector(novo);
+			break;
 		}
 		
 	
