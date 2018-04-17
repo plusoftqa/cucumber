@@ -1,13 +1,7 @@
 package executar;
 
  
-import java.io.File;
-import java.io.IOException;
-
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
