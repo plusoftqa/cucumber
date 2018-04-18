@@ -119,7 +119,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Editarv1":
 			by = By.xpath(editarv1);
 			break;
-		case "Confirmarv1":
+		case "confirmar":
 			by = By.xpath(confirmarv1);
 			break;
 		case "Associar Modulo":
@@ -145,6 +145,33 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			break;
 		case "Novo":
 			by = By.cssSelector(novo);
+			break;
+		case "Salvar":
+			by = By.cssSelector(salvar);
+			break;
+		case "Salvar e Novo":			
+			Util.driver.findElement(By.cssSelector(mais)).click();
+			Thread.sleep(3000);
+			by = By.cssSelector(salvarenovo);
+			break;
+		case "Cancelar":			
+			by = By.cssSelector(cancelar);
+			break;
+		case "Remover":			
+			by = By.cssSelector(remover);
+			break;
+		case "Duplicar":			
+			u.driver.findElement(By.cssSelector(mais)).click();
+			Thread.sleep(3000);
+			by = By.cssSelector(duplicar);
+			break;
+		case "Excluir busca":		
+			u.driver.findElement(By.xpath("//td[@class='attr-actions']"));
+			by = By.cssSelector(remover_busca);
+			break;
+		case "Editar":			
+			u.driver.findElement(By.xpath("//td[@class='attr-actions']"));
+			by = By.cssSelector(editar);
 			break;
 		}
 		
@@ -217,7 +244,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	public void checkbox_Inativo() throws Exception {
 		if(true) {
 		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
-        js.executeScript("document.getElementById('input-time_timetable-do_inactive').click()");
+        js.executeScript("document.getElementById('field-inactiverecord').click()");
 		
 		} else  {
 			System.out.println("teste");
@@ -307,4 +334,16 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		
 		Thread.sleep(9000);
 		
+	}
+
+
+	public void digitar_busca(String busca) throws Exception {
+		// TODO Auto-generated method stub
+		Thread.sleep(5000);
+		Util.driver.findElement(buscarv2).clear();
+		u.Digitar(buscarv2, busca);
+		//clicar_botao("Buscarv1");
+		Util.driver.switchTo().defaultContent();
+		Thread.sleep(3000);
+		Util.driver.switchTo().frame("frame_middle");
 	}}

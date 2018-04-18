@@ -166,10 +166,12 @@ public class LocatorsUtilADM {
 	protected String novo = "button[aria-label='new']";
 	protected String cancelar = "button[aria-label='cancel']";
 	protected String mais = "button[aria-label='pageactions.more']";
-	protected String salvarenovo = "button[aria-label='savenew']";
+	protected String salvarenovo = "a[aria-label='savenew']";
 	protected String salvar = "button[aria-label='save']";
 	protected String remover = "button[aria-label='remove']";
-	protected String duplicar = "button[aria-label='duplicate']";
+	protected String duplicar = "a[aria-label='duplicate']";
+	protected String editar = "button[aria-label='edit']";
+	protected String remover_busca = "button[aria-label='remove']";
 	
 	
 	
@@ -186,6 +188,7 @@ public class LocatorsUtilADM {
 	//Campo buscar
 	protected By buscarv1 = By.xpath("//*[@role='client-filter-field']");
 	protected By buscarv1todos = By.xpath("//input[@role='filter-field']");
+	protected By buscarv2 = By.id("txt-finder-term");
 	
 	
 	

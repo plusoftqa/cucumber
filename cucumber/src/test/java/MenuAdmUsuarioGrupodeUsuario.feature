@@ -89,11 +89,11 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
   And Digitar no campo de busca v1 "05AQAGRUPODEUSUARIOS"
   And Clicar botao "Editarv1"
   And Clicar botao "Remover Modulo"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Clicar botao "Salvarv1"
   And Digitar no campo de busca v1 "05AQAGRUPODEUSUARIOS"
   And Clicar botao "Excluir_buscarv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
@@ -101,11 +101,11 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
   And Digitar no campo de busca v1 "04AQAGRUPODEUSUARIOS"
   And Clicar botao "Editarv1"
   And Clicar botao "Remover Usuario"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Clicar botao "Salvarv1"
   And Digitar no campo de busca v1 "04AQAGRUPODEUSUARIOS"  
   And Clicar botao "Editarv1"
   And Clicar botao "Excluirv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   

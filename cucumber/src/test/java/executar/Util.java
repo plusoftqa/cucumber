@@ -121,6 +121,15 @@ public class Util {
 
 	}
 	
+public void checkbox(String checkbox) {
+		
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("document.getElementById('"+checkbox+"').click()");
+		
+		// TODO Auto-generated method stub
+		
+	}
+	
 
 
 }

@@ -79,7 +79,7 @@ Feature: Menu Administrativo Calendario Feriado
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "05QAAUTOMACAO_QA"
   And Clicar botao "Excluir_buscarv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
@@ -87,14 +87,14 @@ Feature: Menu Administrativo Calendario Feriado
   And Digitar no campo de busca "04QAAUTOMACAO_ATIVO"
   And Clicar botao "Editarv1"
   And Clicar botao "Excluirv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag11
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "02QAAUTOMACAO_QA"
   And Clicar botao "Excluir_buscarv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   

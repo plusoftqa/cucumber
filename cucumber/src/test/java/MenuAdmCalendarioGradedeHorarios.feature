@@ -78,7 +78,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "05AQAGRADEDEHORARIOS"
   And Clicar botao "Excluir_buscarv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
@@ -86,14 +86,14 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Digitar no campo de busca "04AQAGRADEDEHORARIOS"
   And Clicar botao "Editarv1"
   And Clicar botao "Excluirv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag11
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "02AQAGRADEDEHORARIOS"
   And Clicar botao "Excluir_buscarv1"
-  And Clicar botao "Confirmarv1"
+  And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   

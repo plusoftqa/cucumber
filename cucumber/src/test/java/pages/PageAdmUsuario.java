@@ -41,6 +41,25 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 		
 		
 	}
+	public void digitar_Time(String time) {
+		u.driver.findElement(time_times_type).clear();
+		u.Digitar(time_times_type, time);
+		// TODO Auto-generated method stub
+		
+	}
+	public void digitar_E_mail(String email) {
+		u.Digitar(email_times_email, email);
+		// TODO Auto-generated method stub
+		
+	}
+	public void checkbox_Time_destinatario() {
+		// TODO Auto-generated method stub
+		u.checkbox(time_destinatatio_times_checkbox);
+		
+	}
+	
+	
+
 	
 	
 

@@ -36,6 +36,25 @@ public class StepAdmUsuario {
 	    // Write code here that turns the phrase above into concrete actions
 	    usuario.incluir_Time(time);
 	}
+	
+	@And("^Digitar Time \"([^\"]*)\"$")
+	public void digitar_Time(String time) throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    usuario.digitar_Time(time);
+	}
+
+	@And("^Digitar E-mail \"([^\"]*)\"$")
+	public void digitar_E_mail(String email) throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+		usuario.digitar_E_mail(email);
+	}
+	
+	@And("^checkbox Time destinatario$")
+	public void checkbox_Time_destinatario() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+		usuario.checkbox_Time_destinatario();
+	    
+	}
 
 
 }

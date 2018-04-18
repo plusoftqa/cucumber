@@ -87,5 +87,11 @@ public class StepAdmUtil {
 		util.validar_title(title);
 	   
 	}
+	
+	@Given("^Digitar busca \"([^\"]*)\"$")
+	public void digitar_busca(String busca) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    util.digitar_busca(busca);
+	}
 
 }
