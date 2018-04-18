@@ -55,6 +55,15 @@ public class StepAdmUsuario {
 		usuario.checkbox_Time_destinatario();
 	    
 	}
+	
+	
+
+	@And("^Digitar Departamento \"([^\"]*)\"$")
+	public void digitar_Departamento(String departamento) throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    usuario.digitar_Departamento(departamento);
+	}
+
 
 
 }

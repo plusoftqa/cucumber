@@ -19,6 +19,10 @@ public class LocatorsAdmUsuario {
 	protected String responsavel_times_checkbox = "field-opportunityadmin";
 	
 	
+	//departamento
+	protected By departamento_type = By.id("field-department");
+	
+	
 	
 	
 

@@ -57,6 +57,12 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 		u.checkbox(time_destinatatio_times_checkbox);
 		
 	}
+	public void digitar_Departamento(String departamento) {
+		// TODO Auto-generated method stub
+		u.driver.findElement(departamento_type).clear();
+		u.Digitar(departamento_type, departamento);
+		
+	}
 	
 	
 
