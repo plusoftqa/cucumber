@@ -57,7 +57,6 @@ Feature: Menu Administrativo Usuarios > Departamentos
   And Digitar busca "03AQADEPARTAMENTOS"
   And Clicar botao "Editar"
   And Digitar Departamento "04AQADEPARTAMENTOS"
-  And checkbox Inativo 
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
@@ -79,7 +78,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   
   @tag10
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQDEPARTAMENTOS"
+  And Digitar busca "04AQADEPARTAMENTOS"
   And Clicar botao "Editar"
   And Clicar botao "Remover"
   And Clicar botao "confirmar"

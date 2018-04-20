@@ -50,7 +50,6 @@ Feature: Menu Administrativo Calendario Grade de horarios
   Scenario: Incluir um feriado recorrente
   And Digitar descricao grade de horarios "03AQAGRADEDEHORARIOS"
   And Selecionar inclusao de horarios(Semana/Hora inicial/Hora Final) "Domingo", "08:00", "17:00"
-  And checkbox Inativo
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
@@ -61,7 +60,6 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Digitar no campo de busca "03AQAGRADEDEHORARIOS"
   And Clicar botao "Editarv1"
   And Digitar descricao grade de horarios "04AQAGRADEDEHORARIOS"
-  And checkbox Inativo 
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
