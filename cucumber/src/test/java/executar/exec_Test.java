@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( features = "src/test/java/",
+@CucumberOptions( features = "src/test/java/Features/Calendario/",
 					glue = { "" },
 					plugin = {
 						"pretty",
