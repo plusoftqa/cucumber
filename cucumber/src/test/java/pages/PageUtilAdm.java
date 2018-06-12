@@ -44,6 +44,9 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Usuario":
 			menu = usuario;
 			break;
+		case "Localizacao":
+			menu = localizacao;
+			break;
 
 		}
 		
@@ -82,6 +85,24 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			break;
 		case "Seguranca":
 			submenu = usuario_seguranca;
+			break;
+		case "Paises":
+			submenu = localizacao_pais;
+			break;
+		case "Regioes":
+			submenu = localizacao_regioes;
+			break;
+		case "Estados":
+			submenu = localizacao_estados;
+			break;
+		case "Cidades":
+			submenu = localizacao_cidades;
+			break;
+		case "Tipo de endereco":
+			submenu = localizacao_tip_end;
+			break;
+		case "Tipo de logradouro":
+			submenu = localizacao_tip_logra;
 			break;
 
 		}

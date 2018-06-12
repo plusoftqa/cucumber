@@ -48,7 +48,7 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "/target/image/";
+		String caminho = "C:\\Users\\amarinho\\gitCucumber\\cucumber\\target\\image\\";
 		
 		if (scenario.isFailed()) {
 		

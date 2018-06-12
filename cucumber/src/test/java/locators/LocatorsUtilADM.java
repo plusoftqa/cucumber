@@ -23,12 +23,14 @@ public class LocatorsUtilADM {
 	protected String usuario_usuarios = "a[href='/forms/plusoftcrm.utils.forms.crm_user.list/']";
 	protected String usuario_provedores_de_acesso = "a[href='/forms/plusoftcrm.user.forms.adfs.main/']";
 	protected String usuario_seguranca = "a[href='/forms/plusoftcrm.user.forms.configsecurity.list/']";
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
+	//LOCALIZACAO
+	protected String localizacao = "li[data-menu-id='menu.admin.localization']";
+	protected String localizacao_pais = "a[href='/forms-v2/finder/CRM_COUNTRY']";
+	protected String localizacao_regioes = "a[href='/forms-v2/finder/CRM_REGION']";
+	protected String localizacao_estados = "a[href='/forms-v2/finder/CRM_STATE']";
+	protected String localizacao_cidades = "a[href='/forms-v2/finder/CRM_CITY']";
+	protected String localizacao_tip_end = "a[href='/forms-v2/finder/CRM_TPADDRESS']";
+	protected String localizacao_tip_logra = "a[href='/forms-v2/finder/CRM_TPSTREET']";
 //	protected
 //	protected
 //	protected
