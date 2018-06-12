@@ -18,5 +18,15 @@ public class LocatoresAdmLocalizacao {
 	protected By Estados_regiao_select = By.id("field-regionid");
 	
 	
+	// Localizacao > Cidades
+	protected By Cidade_estado_select = By.id("field-stateid");
+	protected By Cidade_Codigo_da_cidade_type = By.id("field-citycode");
+	protected By Cidade_cidades_type = By.id("field-city");
+	
+	// Localizacao > Tipos de endereço
+	protected By Tipos_de_endereco_type = By.id("field-tpaddress");
+	
+	// Localizacao > Tipos de logradouro
+	protected By Tipos_de_logradouro_type = By.id("field-typestreet");
 
 }

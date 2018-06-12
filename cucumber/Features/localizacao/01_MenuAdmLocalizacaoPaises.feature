@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Usuarios > Departamentos
+Feature: Menu Administrativo Localizacao > Paises
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -26,59 +26,65 @@ Feature: Menu Administrativo Usuarios > Departamentos
     And Acessar modulo "Administrativo"
     
    @tag2
-   Scenario: Acessar Menu Localização, Incluir um Regioes
+   Scenario: Acessar Menu Localização, Incluir um Paise
     And Acessar menu "Localizacao"
-    And Acessar sub-menu "Regioes"
+    And Acessar sub-menu "Paises"
     And Clicar botao "Novo"
-    And Digitar Regioes "01AQARegioes"
+    And Digitar Paises "01AQAPAISES"
+    And Digitar Abreviacao "QA"
+    And Digitar Codigo do Pais "55"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
    @tag3
   Scenario: validar tela de busca
-    And Validar title "Região"
+    And Validar title "País"
     
     
  @tag4
   Scenario: Incluir um time
   And Clicar botao "Novo"
-  And Digitar Regioes "02AQARegioes"
+  And Digitar Paises "02AQAPAISES"
+  And Digitar Abreviacao "QA"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
   Scenario: Incluir um Departamento
-  And Digitar Regioes "03AQARegioes"
+  And Digitar Paises "03AQAPAISES"
+  And Digitar Abreviacao "QA"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
     @tag7
   Scenario: Editar registro
-  And Digitar busca "03AQARegioes"
+  And Digitar busca "03AQAPAISES"
   And Clicar botao "Editar"
-  And Digitar Regioes "04AQARegioes"
+  And Digitar Paises "04AQAPAISES"
+  And Digitar Abreviacao "QA"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
    @tag8
   Scenario: Duplicar Registro
-  And Digitar busca "02AQARegioes"
+  And Digitar busca "02AQAPAISES"
   And Clicar botao "Editar"
   And Clicar botao "Duplicar"
-  And Digitar Regioes "05AQARegioes"
+  And Digitar Paises "05AQAPAISES"
+  And Digitar Abreviacao "QA"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
   @tag9
   Scenario: Excluir registro na busca
-  And Digitar busca "05AQARegioes"
+  And Digitar busca "05AQAPAISES"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQARegioes"
+  And Digitar busca "04AQAPAISES"
   And Clicar botao "Editar"
   And Clicar botao "Remover"
   And Clicar botao "confirmar"
@@ -86,7 +92,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   
   @tag11
   Scenario: Excluir registro na busca
-  And Digitar busca "02AQARegioes"
+  And Digitar busca "02AQAPAISES"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso

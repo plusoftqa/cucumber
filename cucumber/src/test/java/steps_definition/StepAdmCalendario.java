@@ -13,8 +13,8 @@ public class StepAdmCalendario  {
 	@And("^Incluir feriados\"([^\"]*)\"$")
 	public void incluir_Calendario_Feriado(String feriado) throws Throwable {	
 		calendario.incluir_feriado(feriado);
-		u.driver.switchTo().defaultContent();
-		u.driver.switchTo().frame("frame_middle");
+		Util.driver.switchTo().defaultContent();
+		Util.driver.switchTo().frame("frame_middle");
 		
 	    // Write code here that turns the phrase above into concrete actions
 	   
@@ -58,7 +58,7 @@ public class StepAdmCalendario  {
 	
 	}
 
-	@Given("^Selecionar inclusao de horarios\\(Semana/Hora inicial/Hora Final\\) \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+	@And("^Selecionar inclusao de horarios\\(Semana/Hora inicial/Hora Final\\) \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
 	public void selecionar_inclusao_de_horarios_Semana_Hora_inicial_Hora_Final(String semana, String hora_inicial, String hora_final) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    calendario.selecionar_inclusao_de_horarios_Semana_Hora_inicial_Hora_Final(semana, hora_inicial, hora_final);

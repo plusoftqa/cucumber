@@ -98,10 +98,10 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Cidades":
 			submenu = localizacao_cidades;
 			break;
-		case "Tipo de endereco":
+		case "Tipos de endereco":
 			submenu = localizacao_tip_end;
 			break;
-		case "Tipo de logradouro":
+		case "Tipos de logradouro":
 			submenu = localizacao_tip_logra;
 			break;
 
@@ -182,16 +182,16 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			by = By.cssSelector(remover);
 			break;
 		case "Duplicar":			
-			u.driver.findElement(By.cssSelector(mais)).click();
+			Util.driver.findElement(By.cssSelector(mais)).click();
 			Thread.sleep(3000);
 			by = By.cssSelector(duplicar);
 			break;
 		case "Excluir busca":		
-			u.driver.findElement(By.xpath("//td[@class='attr-actions']"));
+			Util.driver.findElement(By.xpath("//td[@class='attr-actions']"));
 			by = By.cssSelector(remover_busca);
 			break;
 		case "Editar":			
-			u.driver.findElement(By.xpath("//td[@class='attr-actions']"));
+			Util.driver.findElement(By.xpath("//td[@class='attr-actions']"));
 			by = By.cssSelector(editar);
 			break;
 		}

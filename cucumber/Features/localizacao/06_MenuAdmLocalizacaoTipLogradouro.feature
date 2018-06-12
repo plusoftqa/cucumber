@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Usuarios > Departamentos
+Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -26,66 +26,59 @@ Feature: Menu Administrativo Usuarios > Departamentos
     And Acessar modulo "Administrativo"
     
    @tag2
-   Scenario: Acessar Menu Localização, Incluir um Estados
+   Scenario: Acessar Menu Localização, Incluir um Tipos de logradouro
     And Acessar menu "Localizacao"
-    And Acessar sub-menu "Estados"
+    And Acessar sub-menu "Tipos de logradouro"
     And Clicar botao "Novo"
-    And Digitar Estados "01AQAEstados"
-    And Selecionar Pais "01AQAPAISES"
-    And Digitar Abreviacao "QA"
-    And Selecionar Regiao "01AQARegioes"
+    And Digitar Tipos de logradouro "01AQATipos de logradouro"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
    @tag3
   Scenario: validar tela de busca
-    And Validar title "Estado"
+    And Validar title "Tipo de logradouro"
     
     
  @tag4
   Scenario: Incluir um time
   And Clicar botao "Novo"
-  And Digitar Estados "02AQAEstados"
-  And Selecionar Pais "01AQAPAISES"
+  And Digitar Tipos de logradouro "02AQATipos de logradouro"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
   Scenario: Incluir um Departamento
-  And Digitar Estados "03AQAEstados"
-  And Selecionar Pais "01AQAPAISES"
+  And Digitar Tipos de logradouro "03AQATipos de logradouro"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
     @tag7
   Scenario: Editar registro
-  And Digitar busca "03AQAEstados"
+  And Digitar busca "03AQATipos de logradouro"
   And Clicar botao "Editar"
-  And Digitar Estados "04AQAEstados"
-  And Selecionar Pais "01AQAPAISES"
+  And Digitar Tipos de logradouro "04AQATipos de logradouro"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
    @tag8
   Scenario: Duplicar Registro
-  And Digitar busca "02AQAEstados"
+  And Digitar busca "02AQATipos de logradouro"
   And Clicar botao "Editar"
   And Clicar botao "Duplicar"
-  And Digitar Estados "05AQAEstados"
-  And Selecionar Pais "01AQAPAISES"
+  And Digitar Tipos de logradouro "05AQATipos de logradouro"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
   @tag9
   Scenario: Excluir registro na busca
-  And Digitar busca "05AQAEstados"
+  And Digitar busca "05AQATipos de logradouro"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQAEstados"
+  And Digitar busca "04AQATipos de logradouro"
   And Clicar botao "Editar"
   And Clicar botao "Remover"
   And Clicar botao "confirmar"
@@ -93,7 +86,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   
   @tag11
   Scenario: Excluir registro na busca
-  And Digitar busca "02AQAEstados"
+  And Digitar busca "02AQATipos de logradouro"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso

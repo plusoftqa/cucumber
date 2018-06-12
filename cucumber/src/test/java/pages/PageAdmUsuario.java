@@ -22,7 +22,7 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 		
 	}
 	public void digitar_descricao_grupo_de_usuario(String descricao) {
-		u.driver.findElement(descricao_grupo_de_usuarios_type).clear();
+		Util.driver.findElement(descricao_grupo_de_usuarios_type).clear();
 		u.Digitar(descricao_grupo_de_usuarios_type, descricao);
 		
 	}
@@ -42,7 +42,7 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 		
 	}
 	public void digitar_Time(String time) {
-		u.driver.findElement(time_times_type).clear();
+		Util.driver.findElement(time_times_type).clear();
 		u.Digitar(time_times_type, time);
 		// TODO Auto-generated method stub
 		
@@ -59,7 +59,7 @@ public class PageAdmUsuario extends LocatorsAdmUsuario {
 	}
 	public void digitar_Departamento(String departamento) {
 		// TODO Auto-generated method stub
-		u.driver.findElement(departamento_type).clear();
+		Util.driver.findElement(departamento_type).clear();
 		u.Digitar(departamento_type, departamento);
 		
 	}

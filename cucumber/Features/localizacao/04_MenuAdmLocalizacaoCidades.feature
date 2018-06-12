@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Usuarios > Departamentos
+Feature: Menu Administrativo Localizacao > Cidades
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -26,65 +26,70 @@ Feature: Menu Administrativo Usuarios > Departamentos
     And Acessar modulo "Administrativo"
     
    @tag2
-   Scenario: Acessar Menu Localização, Incluir um Paise
+   Scenario: Acessar Menu Localização, Incluir um Cidades
     And Acessar menu "Localizacao"
-    And Acessar sub-menu "Paises"
+    And Acessar sub-menu "Cidades"
     And Clicar botao "Novo"
-    And Digitar Paises "01AQAPAISES"
-    And Digitar Abreviacao "QA"
-    And Digitar Codigo do Pais "55"
+    And Digitar Cidades "01AQACidades"
+    And Selecionar Estado "01AQAEstados"
+    And Selecionar Pais "01AQAPAISES"
+    And Digitar Codigo da cidade "11"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
    @tag3
   Scenario: validar tela de busca
-    And Validar title "País"
+    And Validar title "Cidade"
     
     
  @tag4
   Scenario: Incluir um time
   And Clicar botao "Novo"
-  And Digitar Paises "02AQAPAISES"
-  And Digitar Abreviacao "QA"
+  And Digitar Cidades "02AQACidades"
+  And Selecionar Estado "01AQAEstados"
+  And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
   Scenario: Incluir um Departamento
-  And Digitar Paises "03AQAPAISES"
-  And Digitar Abreviacao "QA"
+  And Digitar Cidades "03AQACidades"
+  And Selecionar Pais "01AQAPAISES"
+  And Selecionar Estado "01AQAEstados"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
     @tag7
   Scenario: Editar registro
-  And Digitar busca "03AQAPAISES"
+  And Digitar busca "03AQACidades"
   And Clicar botao "Editar"
-  And Digitar Paises "04AQAPAISES"
-  And Digitar Abreviacao "QA"
+  And Digitar Cidades "04AQACidades"
+  And Selecionar Estado "01AQAEstados"
+  And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
    @tag8
   Scenario: Duplicar Registro
-  And Digitar busca "02AQAPAISES"
+  And Digitar busca "02AQACidades"
   And Clicar botao "Editar"
   And Clicar botao "Duplicar"
-  And Digitar Paises "05AQAPAISES"
-  And Digitar Abreviacao "QA"
+  And Digitar Cidades "05AQACidades"
+  And Selecionar Estado "01AQAEstados"
+  And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
   @tag9
   Scenario: Excluir registro na busca
-  And Digitar busca "05AQAPAISES"
+  And Digitar busca "05AQACidades"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @tag10
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQAPAISES"
+  And Digitar busca "04AQACidades"
   And Clicar botao "Editar"
   And Clicar botao "Remover"
   And Clicar botao "confirmar"
@@ -92,7 +97,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   
   @tag11
   Scenario: Excluir registro na busca
-  And Digitar busca "02AQAPAISES"
+  And Digitar busca "02AQACidades"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso

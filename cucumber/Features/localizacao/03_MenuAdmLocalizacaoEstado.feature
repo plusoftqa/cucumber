@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Usuarios > Departamentos
+Feature: Menu Administrativo Localizacao > Estado
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
