@@ -31,23 +31,23 @@ public class LocatorsUtilADM {
 	protected String localizacao_cidades = "a[href='/forms-v2/finder/CRM_CITY']";
 	protected String localizacao_tip_end = "a[href='/forms-v2/finder/CRM_TPADDRESS']";
 	protected String localizacao_tip_logra = "a[href='/forms-v2/finder/CRM_TPSTREET']";
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
+//	PESSOA
+	protected String pessoa = "li[data-menu-id='menu.admin.person']";
+	protected String pessoa_configuracoes_pessoa = "a[href='/forms-v2/finder/CRM_CONFIGPERSON']";
+	protected String pessoa_cargo = "a[href='/forms-v2/finder/CRM_JOBTITLE']";
+	protected String pessoa_profissao = "a[href='/forms-v2/finder/CRM_JOB']";
+	protected String pessoa_estado_civil = "a[href='/forms-v2/finder/CRM_MARITALSTATUS']";
+	protected String pessoa_relacoes_entre_pessoas = "a[href='/forms-v2/finder/CRM_PERSONRELATIONTYPE']";
+	protected String pessoa_formas_tratamento = "a[href='/forms-v2/finder/CRM_PERSONTITLE']";
+	protected String pessoa_segmentos_empresarial = "a[href='/forms-v2/finder/CRM_SEGMENTCORP']";
+	protected String pessoa_tipos_publico = "a[href='/forms-v2/finder/CRM_PERSONTYPE']";
+	protected String pessoa_pessoas_nao_identificadas = "a[href='/forms-v2/finder/CRM_PERSONNOTINFORMED']";
+	protected String pessoa_tipos_de_origem = "a[href='/forms-v2/finder/CRM_PERSONORIGINTYPE']";
+	protected String pessoa_origens = "a[href='/forms-v2/finder/CRM_PERSONORIGIN']";
+	protected String pessoa_status = "a[href='/forms-v2/finder/CRM_PERSONSTATUS']";
+	protected String pessoa_classificacoes = "a[href='/forms-v2/finder/CRM_PERSONCLASSIFICATION']";
+	protected String pessoa_portes = "a[href='/forms-v2/finder/CRM_PERSONCOMPANYSIZE']";
+	protected String pessoa_unificacao_cadastral = "a[href='/forms/plusoftcrm.person.forms.crm_person.cadastralduplicity/']";
 //	protected
 //	protected
 //	protected

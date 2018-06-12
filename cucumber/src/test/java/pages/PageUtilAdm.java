@@ -47,6 +47,9 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Localizacao":
 			menu = localizacao;
 			break;
+		case "Pessoa":
+			menu = pessoa;
+			break;
 
 		}
 		
@@ -104,6 +107,52 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Tipos de logradouro":
 			submenu = localizacao_tip_logra;
 			break;
+		case "Configuracoes de pessoa":
+			submenu = pessoa_configuracoes_pessoa;
+			break;
+		case "Cargos":
+			submenu = pessoa_cargo;
+			break;
+		case "Profissoes":
+			submenu = pessoa_profissao;
+			break;
+		case "Estado Civil":
+			submenu = pessoa_estado_civil;
+			break;
+		case "Relacoes entre as pessoas":
+			submenu = pessoa_relacoes_entre_pessoas;
+			break;
+		case "Formas de tratamento":
+			submenu = pessoa_formas_tratamento;
+			break;
+		case "Segmentos empresarial":
+			submenu = pessoa_segmentos_empresarial;
+			break;
+		case "Tipos de publico":
+			submenu = pessoa_tipos_publico;
+			break;
+		case "Pessoas nao identificadas":
+			submenu = pessoa_pessoas_nao_identificadas;
+			break;
+		case "Tipos de origem":
+			submenu = pessoa_tipos_de_origem;
+			break;
+		case "Origens":
+			submenu = pessoa_origens;
+			break;
+		case "Status":
+			submenu = pessoa_status;
+			break;
+		case "Classificacoes":
+			submenu = pessoa_classificacoes;
+			break;
+		case "Portes":
+			submenu = pessoa_portes;
+			break;
+		case "Unificacao Cadastral":
+			submenu = pessoa_unificacao_cadastral;
+			break;
+		
 
 		}
 		
