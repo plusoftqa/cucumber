@@ -22,7 +22,7 @@ Feature: Cadastrar Nova Pessoa
   @tag1
   Scenario: Cadastrar Nova Pessoa
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Call Center"
     And Clicar botao Novo Atendimento
     And Clicar botao Identificar Pessoa e acionar botao novo

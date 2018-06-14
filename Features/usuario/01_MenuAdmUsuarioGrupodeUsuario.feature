@@ -22,7 +22,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
 
   @tag2
