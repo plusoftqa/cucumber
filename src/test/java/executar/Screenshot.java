@@ -29,7 +29,7 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "C:\\Users\\amarinho\\projetosQA\\automation\\target\\image\\";
+		//String caminho = "C:\\Users\\amarinho\\projetosQA\\automation\\target\\image\\";
 		
 		if (scenario.isFailed()) {
 		
