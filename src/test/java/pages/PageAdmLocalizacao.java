@@ -12,7 +12,7 @@ public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_pais_type).clear();
 		u.Digitar(paises_pais_type, paises);
-		Screenshot.logPrint("digitar_Paises");
+		
 		
 	}
 
@@ -20,14 +20,14 @@ public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_abreviacao_type).clear();
 		u.Digitar(paises_abreviacao_type, arg1);
-		Screenshot.logPrint("digitar_Abreviacao");
+		
 	}
 
 	public void digitar_Codigo_do_Pais(String arg1) {
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_cod_pais_type).clear();
 		u.Digitar(paises_cod_pais_type, arg1);
-		Screenshot.logPrint("digitar_Codigo_do_Pais");
+		
 		
 	}
 
@@ -35,7 +35,7 @@ public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 		// TODO Auto-generated method stub
 		Util.driver.findElement(regioes_type).clear();
 		u.Digitar(regioes_type, arg1);
-		Screenshot.logPrint("digitar_Regioes");
+		
 		
 	}
 
