@@ -44,7 +44,7 @@ public class Screenshot {
 			Reporter.addScreenCaptureFromPath("data:image/gif;base64,"+scrFile.toString());
 			//Reporter.addScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString());
 			//MediaEntityBuilder.createScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString()).build();
-			MediaEntityBuilder.createScreenCaptureFromBase64String(scenario.getName()+".jpg".toString()).build();
+			//MediaEntityBuilder.createScreenCaptureFromBase64String(scenario.getName()+".jpg".toString()).build();
 		
 			} catch (IOException e) {
 			
