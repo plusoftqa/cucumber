@@ -29,21 +29,22 @@ public class Screenshot {
 	@After	
 		public void tearDown(Scenario scenario) {
 		System.out.println("teste");
-		String caminho = "C:\\Users\\amarinho\\gitCucumber\\cucumber\\target\\image\\";
+		String caminho = "C:\\Users\\amarinho\\projetosQA\\automation\\target\\image\\";
 		
 		if (scenario.isFailed()) {
 		
-			File scrFile = ((TakesScreenshot)Util.driver).getScreenshotAs(OutputType.FILE);
+			String scrFile = ((TakesScreenshot)Util.driver).getScreenshotAs(OutputType.BASE64);
 
 			try {       
-			FileUtils.copyFile(scrFile, new File(caminho+scenario.getName()+".jpg"));
+			//FileUtils.copyFile(scrFile, new File(caminho+scenario.getName()+".jpg"));
 			
-			InputStream screenshotStream = new FileInputStream(scrFile);
-			scenario.embed(IOUtils.toByteArray(screenshotStream), "image/png");
+//			InputStream screenshotStream = new FileInputStream(scrFile);
+//			scenario.embed(IOUtils.toByteArray(screenshotStream), "image/png");
 	        
-	        
-			Reporter.addScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString());
-			MediaEntityBuilder.createScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString()).build();
+			Reporter.addScreenCaptureFromPath("data:image/gif;base64,"+scrFile.toString());
+			//Reporter.addScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString());
+			//MediaEntityBuilder.createScreenCaptureFromPath(caminho+scenario.getName()+".jpg".toString()).build();
+			MediaEntityBuilder.createScreenCaptureFromBase64String(scenario.getName()+".jpg".toString()).build();
 		
 			} catch (IOException e) {
 			
