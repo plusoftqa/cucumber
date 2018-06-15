@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( features = "Features/",
+@CucumberOptions( features = "Features/localizacao/01_MenuAdmLocalizacaoPaises.feature",
 
 					glue = { "" },
 					plugin = {
@@ -30,7 +30,7 @@ import cucumber.api.junit.Cucumber;
 public class exec_Test {
 	
 
-
+}
 
 
 //
@@ -49,5 +49,5 @@ public class exec_Test {
 //
 //	    }	
 	
-}
+
 
