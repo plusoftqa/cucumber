@@ -1,17 +1,23 @@
 package pages;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
+import executar.Screenshot;
 import executar.Util;
 import locators.LocatorsUtilADM;
 
 public class PageUtilAdm extends LocatorsUtilADM{
 	
 	Util u = new Util();
+	Screenshot s = new Screenshot();
 	
 	public void acessarmodulo(String Modulo) throws Exception {
 		
@@ -27,6 +33,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		}
 		
 		Util.driver.findElement(By.cssSelector(Modulo)).click();
+		s.logPrint(Modulo);
 		Thread.sleep(3000);
 		
 		
@@ -55,6 +62,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		
 		Util.Selecionar_Menu_e_Sub_menu_ADM(menu);
 		Thread.sleep(3000);
+		s.logPrint(menu);
 		
 		
 	}
@@ -159,6 +167,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.Selecionar_Menu_e_Sub_menu_ADM(submenu);
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
+		s.logPrint(submenu);
 		Thread.sleep(3000);
 	}
 
@@ -248,6 +257,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	
 		
 		Util.Clicar(by);
+		s.logPrint("botão");
 		Thread.sleep(5000);
 		
 		
@@ -312,13 +322,10 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	
 	@SuppressWarnings("unused")
 	public void checkbox_Inativo() throws Exception {
-		if(true) {
+		
 		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
         js.executeScript("document.getElementById('field-inactiverecord').click()");
 		
-		} else  {
-			System.out.println("teste");
-		}
 
 		
 	}
@@ -387,6 +394,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Thread.sleep(5000);
 		Util.driver.findElement(buscarv1).clear();
 		u.Digitar(buscarv1, busca);
+		s.logPrint("digitar_no_campo_de_busca");
 		Thread.sleep(9000);		
 		
 	}
@@ -400,6 +408,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.driver.switchTo().defaultContent();
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
+		s.logPrint("digitar_no_campo_de_busca_v1");
 		
 		
 		Thread.sleep(9000);
@@ -416,4 +425,76 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.driver.switchTo().defaultContent();
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
-	}}
+		s.logPrint("digitar_busca");
+	}
+
+
+	public void filtro_busca(String busca) {
+		// TODO Auto-generated method stub
+		u.selectMenuAdm(By.id("cmb-finder-key"), busca);
+		switch (busca) {
+		case "Ativos":
+			busca = "Não";
+			
+			break;
+		case "Inativos":
+			busca = "Sim";
+			break;
+			
+		}
+		try {			
+		
+		
+		List<WebElement> tabela = Util.driver.findElements(By.tagName("table"));
+
+		for (WebElement tabelas : tabela) {
+
+			List<WebElement> colunas = tabelas.findElements(By.tagName("td"));
+			
+			
+			
+			int total = colunas.size();
+			
+			
+			if (colunas.get(total-2).getText().equals(busca)) {
+				
+				System.out.println("ULTIMA : " + colunas.get(total-2).getText());
+			}
+			/*
+			for (WebElement coluna : colunas) {
+				 
+					
+				
+				System.out.println(coluna.getText());
+				break;
+				//
+				
+				
+			}*/
+		
+		}}catch(Exception e ) {
+			
+		}}
+	public void validar_ordenacao_tela_de_busca(String busca) {
+		// TODO Auto-generated method stub
+		List<WebElement> tabela = Util.driver.findElements(By.tagName("table"));
+
+		for (WebElement tabelas : tabela) {
+
+			List<WebElement> linha = tabelas.findElements(By.tagName("th"));
+			for (WebElement linhas : linha) {
+				List<String> texto = new ArrayList<>();
+				String t = linhas.getText();
+				Collections.addAll(texto, t);
+
+				for (int i = 0; i < texto.size(); i++) {
+					Actions a = new Actions(Util.driver);
+
+					a.doubleClick(linhas).doubleClick().build().perform();
+		
+	
+				}
+				}
+			}
+		}
+}

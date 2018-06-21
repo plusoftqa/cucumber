@@ -2,7 +2,6 @@ package steps_definition;
 
 import cucumber.api.java.en.And;
 import executar.Util;
-import pages.PageAdmLocalizacao;
 import pages.PageAdmPessoa;
 
 public class StepAdmPessoa {

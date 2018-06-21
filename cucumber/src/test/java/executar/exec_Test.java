@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( features = "Features/",
+@CucumberOptions( features = "Features/localizacao/01_MenuAdmLocalizacaoPaises.feature",
 
 					glue = { "" },
 					plugin = {

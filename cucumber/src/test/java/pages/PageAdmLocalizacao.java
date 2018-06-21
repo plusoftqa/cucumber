@@ -1,27 +1,33 @@
 package pages;
 
+import executar.Screenshot;
 import executar.Util;
 import locators.LocatoresAdmLocalizacao;
 
 
 public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 	Util u = new Util();
+	Screenshot s = new Screenshot();
 	public void digitar_Paises(String paises) {
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_pais_type).clear();
 		u.Digitar(paises_pais_type, paises);
+		s.logPrint("digitar_Paises");
+		
 	}
 
 	public void digitar_Abreviacao(String arg1) {
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_abreviacao_type).clear();
 		u.Digitar(paises_abreviacao_type, arg1);
+		s.logPrint("digitar_Abreviacao");
 	}
 
 	public void digitar_Codigo_do_Pais(String arg1) {
 		// TODO Auto-generated method stub
 		Util.driver.findElement(paises_cod_pais_type).clear();
 		u.Digitar(paises_cod_pais_type, arg1);
+		s.logPrint("digitar_Codigo_do_Pais");
 		
 	}
 
@@ -29,6 +35,7 @@ public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 		// TODO Auto-generated method stub
 		Util.driver.findElement(regioes_type).clear();
 		u.Digitar(regioes_type, arg1);
+	
 		
 	}
 

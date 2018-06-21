@@ -4,7 +4,6 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import executar.Util;
 import locators.LocatorsAdmPessoa;
-import locators.LocatorsAdmUsuario;
 
 public class PageAdmPessoa extends LocatorsAdmPessoa {
 	Util u = new Util();

@@ -22,7 +22,7 @@ Feature: Menu Administrativo Localizacao > Paises
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
    @tag2
@@ -36,25 +36,31 @@ Feature: Menu Administrativo Localizacao > Paises
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "País"
-    
-    
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um pais e inativar
   And Clicar botao "Novo"
   And Digitar Paises "02AQAPAISES"
   And Digitar Abreviacao "QA"
+  And checkbox Inativo
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um pais
   And Digitar Paises "03AQAPAISES"
   And Digitar Abreviacao "QA"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+  @tag6
+  Scenario: Validar tela de busca
+  And Validar title "País"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho Menu "Pais"
+  And Validar ordenacao tela de busca
+  
   
     @tag7
   Scenario: Editar registro

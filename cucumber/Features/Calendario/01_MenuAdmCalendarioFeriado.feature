@@ -97,7 +97,6 @@ Feature: Menu Administrativo Calendario Feriado
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  
 
   
   

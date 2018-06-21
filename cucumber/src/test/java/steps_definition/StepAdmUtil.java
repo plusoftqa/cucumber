@@ -93,5 +93,20 @@ public class StepAdmUtil {
 	    // Write code here that turns the phrase above into concrete actions
 	    util.digitar_busca(busca);
 	}
+	
+	@Given("^Filtro buscar \"([^\"]*)\"$")
+	public void filtro_busca(String busca) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    util.filtro_busca(busca);
+	}
+	
+	@Given("^Validar ordenacao tela de busca$")
+	public void validar_ordenacao_tela_de_busca(String busca) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    util.validar_ordenacao_tela_de_busca(busca);
+	}
+	  
+	
+	  
 
 }
