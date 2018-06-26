@@ -3,6 +3,11 @@ package locators;
 import org.openqa.selenium.By;
 
 public class LocatorsUtilADM {
+	// validar msg
+	protected String Msg_Erro = "div[class='ui-notification ng-scope error clickable']";
+	protected String Msg_sucesso = "//*[@class='ui-notification ng-scope success clickable']";
+	
+	
 	//modulos
 	protected String Menu = "li[role=user-menu]";
 	protected String ModuloADM = "a[href*='?m=menu.admin']";

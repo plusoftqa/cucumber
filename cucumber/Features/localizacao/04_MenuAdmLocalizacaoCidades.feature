@@ -22,7 +22,7 @@ Feature: Menu Administrativo Localizacao > Cidades
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
    @tag2
@@ -37,9 +37,7 @@ Feature: Menu Administrativo Localizacao > Cidades
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Cidade"
+
     
     
  @tag4
@@ -59,6 +57,15 @@ Feature: Menu Administrativo Localizacao > Cidades
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
+  @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Cidade"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Cidades"
+  And Validar ordenacao tela de busca
+  
     @tag7
   Scenario: Editar registro
   And Digitar busca "03AQACidades"
@@ -75,8 +82,8 @@ Feature: Menu Administrativo Localizacao > Cidades
   And Clicar botao "Editar"
   And Clicar botao "Duplicar"
   And Digitar Cidades "05AQACidades"
-  And Selecionar Estado "01AQAEstados"
   And Selecionar Pais "01AQAPAISES"
+  And Selecionar Estado "01AQAEstados" 
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   

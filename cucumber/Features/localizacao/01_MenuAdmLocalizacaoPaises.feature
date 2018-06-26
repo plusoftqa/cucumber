@@ -58,7 +58,7 @@ Feature: Menu Administrativo Localizacao > Paises
   And Filtro buscar "Ativos"
   And Filtro buscar "Inativos"
   And Filtro buscar "Ativos / Inativos"
-  And Validar Caminho Menu "Pais"
+  And Validar Caminho do Menu "Pais"
   And Validar ordenacao tela de busca
   
   

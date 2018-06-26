@@ -22,7 +22,7 @@ Feature: Menu Administrativo Localizacao > Regioes
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
    @tag2
@@ -34,9 +34,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Região"
+  
     
     
  @tag4
@@ -51,6 +49,15 @@ Feature: Menu Administrativo Localizacao > Regioes
   And Digitar Regioes "03AQARegioes"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+    @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Regiões"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Regiões"
+  And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro
@@ -90,3 +97,12 @@ Feature: Menu Administrativo Localizacao > Regioes
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+  
+  @tag12
+  Scenario: Validar Alert de erro
+  And Clicar botao "Novo"
+  And Digitar Regioes ""
+  And Clicar botao "Salvar"
+  And Validar Alert de erro
+  

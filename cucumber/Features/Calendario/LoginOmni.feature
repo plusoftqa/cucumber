@@ -22,4 +22,4 @@ Feature: Login Omni
   @tag1
   Scenario: Acessar Omni
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"

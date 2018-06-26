@@ -22,7 +22,7 @@ Feature: Menu Administrativo Localizacao > Estado
   @tag1
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
-    And Acessar Sistema com o usuario "augustomarinho@plusoft.com.br" e senha "Mudar123"
+    And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
    @tag2
@@ -37,12 +37,7 @@ Feature: Menu Administrativo Localizacao > Estado
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Estado"
-    
-    
- @tag4
+  @tag4
   Scenario: Incluir um time
   And Clicar botao "Novo"
   And Digitar Estados "02AQAEstados"
@@ -56,6 +51,15 @@ Feature: Menu Administrativo Localizacao > Estado
   And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+      @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Estado"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Estados"
+  And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro

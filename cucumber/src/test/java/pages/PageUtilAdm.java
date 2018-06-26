@@ -1,9 +1,11 @@
 package pages;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -475,7 +477,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		}}catch(Exception e ) {
 			
 		}}
-	public void validar_ordenacao_tela_de_busca(String busca) {
+	public void validar_ordenacao_tela_de_busca() {
 		// TODO Auto-generated method stub
 		List<WebElement> tabela = Util.driver.findElements(By.tagName("table"));
 
@@ -497,4 +499,26 @@ public class PageUtilAdm extends LocatorsUtilADM{
 				}
 			}
 		}
+
+
+	public void validar_Alert_de_Sucesso() {
+		// TODO Auto-generated method stub
+		Assert.assertEquals(Msg_sucesso, Msg_sucesso );
+
+		
+		
+	}
+	
+	public void validar_Alert_de_erro() {
+		// TODO Auto-generated method stub
+		
+			
+			Util.driver.findElement(By.cssSelector(Msg_Erro)).click();
+			System.out.println("OK");
+	
+		
+			
+	
+		
+	}
 }
