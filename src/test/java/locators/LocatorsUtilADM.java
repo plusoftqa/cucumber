@@ -48,8 +48,9 @@ public class LocatorsUtilADM {
 	protected String pessoa_classificacoes = "a[href='/forms-v2/finder/CRM_PERSONCLASSIFICATION']";
 	protected String pessoa_portes = "a[href='/forms-v2/finder/CRM_PERSONCOMPANYSIZE']";
 	protected String pessoa_unificacao_cadastral = "a[href='/forms/plusoftcrm.person.forms.crm_person.cadastralduplicity/']";
-//	protected
-//	protected
+
+//	CAMINHO MENUS
+	protected String Menu_Localizacao_paises = "Plusoft CRM > Localização > Países >";
 //	protected
 //	protected
 //	protected

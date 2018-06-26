@@ -101,9 +101,16 @@ public class StepAdmUtil {
 	}
 	
 	@Given("^Validar ordenacao tela de busca$")
-	public void validar_ordenacao_tela_de_busca(String busca) throws Throwable {
+	public void validar_ordenacao_tela_de_busca() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    util.validar_ordenacao_tela_de_busca(busca);
+	    util.validar_ordenacao_tela_de_busca();
+	    
+	}
+	
+	@And("^Validar Caminho \"([^\"]*)\"$")
+	public void validar_Caminho(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   util.validar_Caminho_Menu(arg1);
 	}
 	  
 	
