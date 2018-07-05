@@ -34,23 +34,28 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Tipo de logradouro"
-    
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um Tipo de Logradouro
   And Clicar botao "Novo"
   And Digitar Tipos de logradouro "02AQATipos de logradouro"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um Tipo de Logradouro
   And Digitar Tipos de logradouro "03AQATipos de logradouro"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+      @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Tipos de Logradouro"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Cidades"
+  And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro
@@ -90,3 +95,10 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+       @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Tipos de logradouro ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

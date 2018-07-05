@@ -102,3 +102,10 @@ Feature: Menu Administrativo Localizacao > Paises
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Paises ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

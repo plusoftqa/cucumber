@@ -34,23 +34,32 @@ Feature: Menu Administrativo Pessoa > Segmentos empresarial
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Cargo"
+
     
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um Segmentos empresarial
   And Clicar botao "Novo"
   And Digitar Segmentos empresarial "02AQASegmentos empresarial"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um Segmentos empresarial
   And Digitar Segmentos empresarial "03AQASegmentos empresarial"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+      @tag6
+  Scenario: Validar tela de busca
+    And Validar title "Segmento Empresarial"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Segmento Empresarial"
+    And Validar ordenacao tela de busca
+  
+  
   
     @tag7
   Scenario: Editar registro
@@ -90,3 +99,10 @@ Feature: Menu Administrativo Pessoa > Segmentos empresarial
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Segmentos empresarial ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

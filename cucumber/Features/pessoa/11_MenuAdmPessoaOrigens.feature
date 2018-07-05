@@ -26,7 +26,7 @@ Feature: Menu Administrativo Pessoa > Origens
     And Acessar modulo "Administrativo"
     
    @tag2
-   Scenario: Acessar Menu Pessoa, Incluir um Origens
+   Scenario: Acessar Menu Pessoa, Incluir uma Origem
     And Acessar menu "Pessoa"
     And Acessar sub-menu "Origens"
     And Clicar botao "Novo"
@@ -35,13 +35,8 @@ Feature: Menu Administrativo Pessoa > Origens
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Cargo"
-    
-    
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir uma Origem
   And Clicar botao "Novo"
   And Digitar Origens "02AQAOrigens"
   And Selecionar Tipo de origem "01AQATipos de origem"
@@ -49,12 +44,23 @@ Feature: Menu Administrativo Pessoa > Origens
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir uma Origem
   And Digitar Origens "03AQAOrigens"
   And Selecionar Tipo de origem "01AQATipos de origem"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
+  
+    @tag6
+  Scenario: Validar tela de busca
+    And Validar title "Origens"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Origens"
+    And Validar ordenacao tela de busca
+    
+    
     @tag7
   Scenario: Editar registro
   And Digitar busca "03AQAOrigens"
@@ -95,3 +101,10 @@ Feature: Menu Administrativo Pessoa > Origens
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Origens ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro
