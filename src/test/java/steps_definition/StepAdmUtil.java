@@ -2,6 +2,7 @@ package steps_definition;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import pages.PageUtilAdm;
 
 public class StepAdmUtil {
@@ -62,7 +63,7 @@ public class StepAdmUtil {
 
 	
 	@And("^checkbox Inativo$")
-	public void checkbox_Inativo() throws Throwable {
+	public void checkbox_Inativo() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 	   util.checkbox_Inativo();
 	}
@@ -70,47 +71,51 @@ public class StepAdmUtil {
 
 	
 	@Given("^Validar Alert de Sucesso$")
-	public void validar_Alert_de_Sucesso() throws Throwable {
+	public void validar_Alert_de_Sucesso() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
+		util.validar_Alert_de_Sucesso();
 	  
 	}
+	
+	@Then("^Validar Alert de erro$")
+	public void validar_Alert_de_erro() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+		util.validar_Alert_de_erro();
+		
+	  
+	}
+	
+	
 
 	@Given("^Validar Caminho do Menu \"([^\"]*)\"$")
-	public void validar_Caminho_do_Menu(String caminho) throws Throwable {
+	public void validar_Caminho_do_Menu(String caminho) throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 	    util.validar_Caminho_do_Menu(caminho);
 	}
 
 	@Given("^Validar title \"([^\"]*)\"$")
-	public void validar_title(String title) throws Throwable {
+	public void validar_title(String title) throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 		util.validar_title(title);
 	   
 	}
 	
 	@Given("^Digitar busca \"([^\"]*)\"$")
-	public void digitar_busca(String busca) throws Throwable {
+	public void digitar_busca(String busca) throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 	    util.digitar_busca(busca);
 	}
 	
 	@Given("^Filtro buscar \"([^\"]*)\"$")
-	public void filtro_busca(String busca) throws Throwable {
+	public void filtro_busca(String busca) throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 	    util.filtro_busca(busca);
 	}
 	
 	@Given("^Validar ordenacao tela de busca$")
-	public void validar_ordenacao_tela_de_busca() throws Throwable {
+	public void validar_ordenacao_tela_de_busca() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 	    util.validar_ordenacao_tela_de_busca();
-	    
-	}
-	
-	@And("^Validar Caminho \"([^\"]*)\"$")
-	public void validar_Caminho(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	   util.validar_Caminho_Menu(arg1);
 	}
 	  
 	

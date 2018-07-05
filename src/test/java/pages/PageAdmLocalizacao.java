@@ -35,7 +35,7 @@ public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
 		// TODO Auto-generated method stub
 		Util.driver.findElement(regioes_type).clear();
 		u.Digitar(regioes_type, arg1);
-		
+	
 		
 	}
 

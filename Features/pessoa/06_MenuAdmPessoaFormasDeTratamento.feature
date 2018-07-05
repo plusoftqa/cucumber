@@ -26,7 +26,7 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
     And Acessar modulo "Administrativo"
     
    @tag2
-   Scenario: Acessar Menu Pessoa, Incluir um Formas de tratamento
+   Scenario: Acessar Menu Pessoa, Incluir uma Formas de tratamento
     And Acessar menu "Pessoa"
     And Acessar sub-menu "Formas de tratamento"
     And Clicar botao "Novo"
@@ -34,13 +34,11 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Cargo"
+
     
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um uma Formas de tratamento
   And Clicar botao "Novo"
   And Digitar Formas de tratamento "02AQAFtratamento"
   And Clicar botao "Salvar e Novo"
@@ -51,6 +49,15 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
   And Digitar Formas de tratamento "03AQAFtratamento"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+    @tag6
+  Scenario: Validar tela de busca
+    And Validar title "Formas de tratamento"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Formas de tratamento"
+    And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro
@@ -90,3 +97,10 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Formas de tratamento ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

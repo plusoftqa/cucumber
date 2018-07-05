@@ -34,27 +34,34 @@ Feature: Menu Administrativo Localizacao > Tipo de Endereco
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Tipo de Endereço"
+ 
     
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um Tipo de Endereco
   And Clicar botao "Novo"
   And Digitar Tipos de endereco "02AQATipos de endereco"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um Tipo de Endereco
   And Digitar Tipos de endereco "03AQATipos de endereco"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
+    @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Tipos de Endereco"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Cidades"
+  And Validar ordenacao tela de busca
+  
     @tag7
   Scenario: Editar registro
-  And Digitar busca "03AQATipos de endereco"
+  And Digitar busca "03AQATipos de endereço"
   And Clicar botao "Editar"
   And Digitar Tipos de endereco "04AQATipos de endereco"
   And Clicar botao "Salvar"
@@ -90,3 +97,10 @@ Feature: Menu Administrativo Localizacao > Tipo de Endereco
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+       @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Tipos de endereco ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

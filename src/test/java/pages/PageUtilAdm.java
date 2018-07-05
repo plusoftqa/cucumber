@@ -4,18 +4,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import executar.Screenshot;
 import executar.Util;
 import locators.LocatorsUtilADM;
 
 public class PageUtilAdm extends LocatorsUtilADM{
 	
 	Util u = new Util();
+	Screenshot s = new Screenshot();
 	
 	public void acessarmodulo(String Modulo) throws Exception {
 		
@@ -31,6 +33,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		}
 		
 		Util.driver.findElement(By.cssSelector(Modulo)).click();
+		
 		Thread.sleep(3000);
 		
 		
@@ -59,6 +62,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		
 		Util.Selecionar_Menu_e_Sub_menu_ADM(menu);
 		Thread.sleep(3000);
+		
 		
 		
 	}
@@ -163,6 +167,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.Selecionar_Menu_e_Sub_menu_ADM(submenu);
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
+		
 		Thread.sleep(3000);
 	}
 
@@ -252,6 +257,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	
 		
 		Util.Clicar(by);
+		
 		Thread.sleep(5000);
 		
 		
@@ -314,7 +320,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 
 
 	
-	@SuppressWarnings("unused")
+	
 	public void checkbox_Inativo() throws Exception {
 		
 		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
@@ -388,6 +394,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Thread.sleep(5000);
 		Util.driver.findElement(buscarv1).clear();
 		u.Digitar(buscarv1, busca);
+		
 		Thread.sleep(9000);		
 		
 	}
@@ -401,6 +408,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.driver.switchTo().defaultContent();
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
+		
 		
 		
 		Thread.sleep(9000);
@@ -417,6 +425,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		Util.driver.switchTo().defaultContent();
 		Thread.sleep(3000);
 		Util.driver.switchTo().frame("frame_middle");
+		
 	}
 
 
@@ -466,12 +475,8 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		}}catch(Exception e ) {
 			
 		}}
-	public void validar_ordenacao_tela_de_busca() throws Exception {
+	public void validar_ordenacao_tela_de_busca() {
 		// TODO Auto-generated method stub
-		Util.driver.switchTo().defaultContent();
-		Thread.sleep(3000);
-		Util.driver.switchTo().frame("frame_middle");
-		
 		List<WebElement> tabela = Util.driver.findElements(By.tagName("table"));
 
 		for (WebElement tabelas : tabela) {
@@ -494,42 +499,24 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		}
 
 
-	public void validar_Caminho_Menu(String arg1) {
+	public void validar_Alert_de_Sucesso() {
 		// TODO Auto-generated method stub
-		String texto;
-		switch (arg1) {
-		case "Menu Pais":
-			arg1 = Menu_Localizacao_paises;
-			break;
-		case "Menu Regiao":
-			arg1 = Menu_Localizacao_paises;
-			break;
+		Assert.assertEquals(Msg_sucesso, Msg_sucesso );
+
 		
-		}
 		
-		try {
-			List<WebElement> menu = u.driver.findElements(By.tagName("div"));
-
-			for (WebElement menus : menu) {
-				if (menus.getAttribute("class").contains("well no-select")) {
-					System.out.println(menus.getText());
-					if (menus.getText().contains(arg1)) {
-						System.out.println(menus.getText());
-				
-					} else {
-
-						System.out.println("NOK");
-
-						
-
-					}
-
-				}
-			}
-
-		} catch (NoSuchElementException e) {
-			System.err.format("No Element Found to enter text" + e);
-
-		}
+	}
 	
-	}}
+	public void validar_Alert_de_erro() {
+		// TODO Auto-generated method stub
+		
+			
+			Util.driver.findElement(By.cssSelector(Msg_Erro)).click();
+			System.out.println("OK");
+	
+		
+			
+	
+		
+	}
+}

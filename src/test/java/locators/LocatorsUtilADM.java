@@ -3,6 +3,11 @@ package locators;
 import org.openqa.selenium.By;
 
 public class LocatorsUtilADM {
+	// validar msg
+	protected String Msg_Erro = "div[class='ui-notification ng-scope error clickable']";
+	protected String Msg_sucesso = "//*[@class='ui-notification ng-scope success clickable']";
+	
+	
 	//modulos
 	protected String Menu = "li[role=user-menu]";
 	protected String ModuloADM = "a[href*='?m=menu.admin']";
@@ -48,9 +53,8 @@ public class LocatorsUtilADM {
 	protected String pessoa_classificacoes = "a[href='/forms-v2/finder/CRM_PERSONCLASSIFICATION']";
 	protected String pessoa_portes = "a[href='/forms-v2/finder/CRM_PERSONCOMPANYSIZE']";
 	protected String pessoa_unificacao_cadastral = "a[href='/forms/plusoftcrm.person.forms.crm_person.cadastralduplicity/']";
-
-//	CAMINHO MENUS
-	protected String Menu_Localizacao_paises = "Plusoft CRM > Localização > Países >";
+//	protected
+//	protected
 //	protected
 //	protected
 //	protected

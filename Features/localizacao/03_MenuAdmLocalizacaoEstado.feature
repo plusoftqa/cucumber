@@ -37,13 +37,8 @@ Feature: Menu Administrativo Localizacao > Estado
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Estado"
-    
-    
- @tag4
-  Scenario: Incluir um time
+  @tag4
+  Scenario: Incluir um Estados
   And Clicar botao "Novo"
   And Digitar Estados "02AQAEstados"
   And Selecionar Pais "01AQAPAISES"
@@ -51,11 +46,20 @@ Feature: Menu Administrativo Localizacao > Estado
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um Estados
   And Digitar Estados "03AQAEstados"
   And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+      @tag6
+  Scenario: Validar tela de busca
+  And Validar title "Estado"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Estados"
+  And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro
@@ -97,3 +101,10 @@ Feature: Menu Administrativo Localizacao > Estado
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Estados ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

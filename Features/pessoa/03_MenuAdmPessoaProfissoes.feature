@@ -40,18 +40,27 @@ Feature: Menu Administrativo Pessoa > Profissoes
     
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir uma profissao
   And Clicar botao "Novo"
   And Digitar Profissoes "02AQAProfissoes"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir uma profissao
   And Digitar Profissoes "03AQAProfissoes"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
+    @tag6
+  Scenario: Validar tela de busca
+    And Validar title "Profissao"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Cargo"
+    And Validar ordenacao tela de busca
+    
     @tag7
   Scenario: Editar registro
   And Digitar busca "03AQAProfissoes"
@@ -90,3 +99,11 @@ Feature: Menu Administrativo Pessoa > Profissoes
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Profissoes ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro
+  

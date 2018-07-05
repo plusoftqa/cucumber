@@ -33,24 +33,30 @@ Feature: Menu Administrativo Pessoa > Status
     And Digitar Status "01AQAStatus"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
-    
-   @tag3
-  Scenario: validar tela de busca
-    And Validar title "Cargo"
+
     
     
  @tag4
-  Scenario: Incluir um time
+  Scenario: Incluir um Status
   And Clicar botao "Novo"
   And Digitar Status "02AQAStatus"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @tag5
-  Scenario: Incluir um Departamento
+  Scenario: Incluir um Status
   And Digitar Status "03AQAStatus"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
+  
+    @tag6
+  Scenario: Validar tela de busca
+    And Validar title "Status"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Status"
+    And Validar ordenacao tela de busca
   
     @tag7
   Scenario: Editar registro
@@ -90,3 +96,10 @@ Feature: Menu Administrativo Pessoa > Status
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+    @tag12
+  Scenario: Validar Alert de erro
+    And Clicar botao "Novo"
+    And Digitar Status ""
+    And Clicar botao "Salvar"
+    And Validar Alert de erro
