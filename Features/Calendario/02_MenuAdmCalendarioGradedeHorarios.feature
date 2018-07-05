@@ -18,13 +18,13 @@
 #Sample Feature Definition Template
 @tag
 Feature: Menu Administrativo Calendario Grade de horarios
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-  @tag2
+  @Incluir_completo
   Scenario: Acessar Menu Pessoa, Incluir uma Grade de Horarios
     And Acessar menu "Calendario"
     And Acessar sub-menu "Grade de horarios"
@@ -38,7 +38,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
     And Validar title "Grade de Hor�rios"
 
     
-  @tag4
+  @Incluir
   Scenario: Cadastrar uma Grade de Horarios
   And Clicar botao "Novov1"
   And Digitar descricao grade de horarios "02AQAGRADEDEHORARIOS"
@@ -46,7 +46,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Clicar botao "Salvar e Novov1"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um feriado recorrente
   And Digitar descricao grade de horarios "03AQAGRADEDEHORARIOS"
   And Selecionar inclusao de horarios(Semana/Hora inicial/Hora Final) "Domingo", "08:00", "17:00"
@@ -55,7 +55,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
   
  
   
-  @tag7
+  @Editar
   Scenario: Editar registro
   And Digitar no campo de busca "03AQAGRADEDEHORARIOS"
   And Clicar botao "Editarv1"
@@ -63,7 +63,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar no campo de busca "02AQAGRADEDEHORARIOS"
   And Clicar botao "Editarv1"
@@ -72,14 +72,14 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "05AQAGRADEDEHORARIOS"
   And Clicar botao "Excluir_buscarv1"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar no campo de busca "04AQAGRADEDEHORARIOS"
   And Clicar botao "Editarv1"
@@ -87,7 +87,7 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "02AQAGRADEDEHORARIOS"
   And Clicar botao "Excluir_buscarv1"

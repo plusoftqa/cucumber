@@ -19,7 +19,7 @@
 @tag
 Feature: Login Omni
 
-  @tag1
+  @Acesso_sistema
   Scenario: Acessar Omni
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"

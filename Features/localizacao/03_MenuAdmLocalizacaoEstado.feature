@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Localizacao > Estado
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Localização, Incluir um Estados
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Estados"
@@ -37,7 +37,7 @@ Feature: Menu Administrativo Localizacao > Estado
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
-  @tag4
+  @Incluir
   Scenario: Incluir um Estados
   And Clicar botao "Novo"
   And Digitar Estados "02AQAEstados"
@@ -45,14 +45,14 @@ Feature: Menu Administrativo Localizacao > Estado
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um Estados
   And Digitar Estados "03AQAEstados"
   And Selecionar Pais "01AQAPAISES"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-      @tag6
+      @Validar_tela_de_busca
   Scenario: Validar tela de busca
   And Validar title "Estado"
   And Filtro buscar "Ativos"
@@ -61,7 +61,7 @@ Feature: Menu Administrativo Localizacao > Estado
   And Validar Caminho do Menu "Estados"
   And Validar ordenacao tela de busca
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQAEstados"
   And Clicar botao "Editar"
@@ -70,7 +70,7 @@ Feature: Menu Administrativo Localizacao > Estado
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQAEstados"
   And Clicar botao "Editar"
@@ -80,14 +80,14 @@ Feature: Menu Administrativo Localizacao > Estado
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQAEstados"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQAEstados"
   And Clicar botao "Editar"
@@ -95,14 +95,14 @@ Feature: Menu Administrativo Localizacao > Estado
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQAEstados"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-    @tag12
+    @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Estados ""

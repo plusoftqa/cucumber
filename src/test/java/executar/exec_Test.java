@@ -1,6 +1,7 @@
 package executar;
 
  
+import org.junit.After;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -30,7 +31,10 @@ public class exec_Test {
 	
 
 
-
+@After
+public static void exit () {
+	Util.driver.close();
+}
 
 //
 //	@AfterClass

@@ -19,13 +19,13 @@
 @tag
 Feature: Menu Administrativo Calendario Feriado
 
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-  @tag2
+  @Incluir_completo
   Scenario: Acessar Menu Pessoa, Incluir um Feriado
     And Acessar menu "Calendario"
     And Acessar sub-menu "Feriados"
@@ -39,7 +39,7 @@ Feature: Menu Administrativo Calendario Feriado
     And Validar title "Feriados"
 
     
-  @tag4
+  @Incluir
   Scenario: Cadastrar um feriado
   And Clicar botao "Novov1"
   And Digitar data feriado "01/01/2018"
@@ -47,7 +47,7 @@ Feature: Menu Administrativo Calendario Feriado
   And Clicar botao "Salvar e Novov1"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um feriado recorrente
   And Digitar data feriado "01/02/2018"
   And Digitar descricao feriado "03QAAUTOMACAO_INATIVO"
@@ -57,7 +57,7 @@ Feature: Menu Administrativo Calendario Feriado
   
  
   
-  @tag7
+  @Editar
   Scenario: Editar registro
   And Digitar no campo de busca "03QAAUTOMACAO_INATIVO"
   And Clicar botao "Editarv1"
@@ -66,7 +66,7 @@ Feature: Menu Administrativo Calendario Feriado
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar no campo de busca "02QAAUTOMACAO_QA"
   And Clicar botao "Editarv1"
@@ -75,14 +75,14 @@ Feature: Menu Administrativo Calendario Feriado
   And Clicar botao "Salvarv1"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "05QAAUTOMACAO_QA"
   And Clicar botao "Excluir_buscarv1"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar no campo de busca "04QAAUTOMACAO_ATIVO"
   And Clicar botao "Editarv1"
@@ -90,7 +90,7 @@ Feature: Menu Administrativo Calendario Feriado
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar no campo de busca "02QAAUTOMACAO_QA"
   And Clicar botao "Excluir_buscarv1"

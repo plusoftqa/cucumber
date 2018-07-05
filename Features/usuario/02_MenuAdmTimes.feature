@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Usuarios > Times
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Pessoa, Incluir um time
     And Acessar menu "Usuario"
     And Acessar sub-menu "Times"
@@ -39,7 +39,7 @@ Feature: Menu Administrativo Usuarios > Times
     And Validar title "Times"
     
     
- @tag4
+ @Incluir
   Scenario: Incluir um time
   And Clicar botao "Novo"
   And Digitar Time "02AQATIMES"
@@ -47,7 +47,7 @@ Feature: Menu Administrativo Usuarios > Times
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um time com destinatario
   And Digitar Time "03AQATIMES"
   And Digitar E-mail "teste@teste.com.br"
@@ -55,7 +55,7 @@ Feature: Menu Administrativo Usuarios > Times
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQATIMES"
   And Clicar botao "Editar"
@@ -64,7 +64,7 @@ Feature: Menu Administrativo Usuarios > Times
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQATIMES"
   And Clicar botao "Editar"
@@ -73,14 +73,14 @@ Feature: Menu Administrativo Usuarios > Times
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQATIMES"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQATIMES"
   And Clicar botao "Editar"
@@ -88,7 +88,7 @@ Feature: Menu Administrativo Usuarios > Times
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQATIMES"
   And Clicar botao "Excluir busca"

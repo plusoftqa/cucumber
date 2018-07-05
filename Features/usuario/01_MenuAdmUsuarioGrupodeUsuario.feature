@@ -19,13 +19,13 @@
 @tag
 Feature: Menu Administrativo Usuario > Grupo de usuarios
 
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
 
-  @tag2
+  @Incluir_completo
   Scenario: Acessar Menu Pessoa, Incluir uma Grade de Horarios
     And Acessar menu "Usuario"
     And Acessar sub-menu "Grupos de usuario"
@@ -38,7 +38,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
   Scenario: validar tela de busca
     And Validar title "Grupos de usuário"
 
-  @tag4
+  @Incluir
   Scenario: Incluir um grupo de usuário e definir um modulo
     And Clicar botao "Novov1"
     And Digitar descricao grupo de usuario "02AQAGRUPODEUSUARIOS"
@@ -51,7 +51,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "Salvar e Novov1"
     And Validar Alert de Sucesso
 
-  @tag5
+  @Incluir
   Scenario: Incluir um grupo de usuários e associar um usuario
     And Digitar descricao grupo de usuario "03AQAGRUPODEUSUARIOS"
     And Clicar botao "Salvarv1"
@@ -64,7 +64,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "Salvarv1"
     And Validar Alert de Sucesso
 
-  @tag6
+  @Validar_tela_de_busca
   Scenario: Editar registro
     And Digitar no campo de busca v1 "03AQAGRUPODEUSUARIOS"
     And Clicar botao "Editarv1"
@@ -72,7 +72,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "Salvarv1"
     And Validar Alert de Sucesso
 
-  @tag7
+  @Editar
   Scenario: Duplicar Registro
     And Digitar no campo de busca v1 "02AQAGRUPODEUSUARIOS"
     And Clicar botao "Editarv1"
@@ -81,7 +81,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "Salvarv1"
     And Validar Alert de Sucesso
 
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
     And Digitar no campo de busca v1 "05AQAGRUPODEUSUARIOS"
     And Clicar botao "Editarv1"
@@ -93,7 +93,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
     And Digitar no campo de busca v1 "04AQAGRUPODEUSUARIOS"
     And Clicar botao "Editarv1"

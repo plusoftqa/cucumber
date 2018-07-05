@@ -19,7 +19,7 @@
 @tag
 Feature: Cadastrar Nova Pessoa
 
-  @tag1
+  @Acesso_sistema
   Scenario: Cadastrar Nova Pessoa
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
@@ -30,7 +30,7 @@ Feature: Cadastrar Nova Pessoa
     And Clicar botao Salvar
     Then Cliente incluido com sucesso
 
-  @tag2
+  @Incluir_completo
   Scenario: Criar uma ocorrencia valida
     Given Gerar Protocolo
     And Abrir ocorrencia

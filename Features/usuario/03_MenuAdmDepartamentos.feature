@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Usuarios > Departamentos
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Pessoa, Incluir um DEPARTAMENTO
     And Acessar menu "Usuario"
     And Acessar sub-menu "Departamentos"
@@ -39,20 +39,20 @@ Feature: Menu Administrativo Usuarios > Departamentos
     And Validar title "Departamento"
     
     
- @tag4
+ @Incluir
   Scenario: Incluir um time
   And Clicar botao "Novo"
   And Digitar Departamento "02AQADEPARTAMENTOS"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um Departamento
   And Digitar Departamento "03AQADEPARTAMENTOS"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQADEPARTAMENTOS"
   And Clicar botao "Editar"
@@ -60,7 +60,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQADEPARTAMENTOS"
   And Clicar botao "Editar"
@@ -69,14 +69,14 @@ Feature: Menu Administrativo Usuarios > Departamentos
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQADEPARTAMENTOS"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQADEPARTAMENTOS"
   And Clicar botao "Editar"
@@ -84,7 +84,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQADEPARTAMENTOS"
   And Clicar botao "Excluir busca"

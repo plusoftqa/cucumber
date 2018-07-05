@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Localizacao > Tipo de Logradouro
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Localização, Incluir um Tipos de logradouro
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Tipos de logradouro"
@@ -35,20 +35,20 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
     And Validar Alert de Sucesso   
     
     
- @tag4
+ @Incluir
   Scenario: Incluir um Tipo de Logradouro
   And Clicar botao "Novo"
   And Digitar Tipos de logradouro "02AQATipos de logradouro"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um Tipo de Logradouro
   And Digitar Tipos de logradouro "03AQATipos de logradouro"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-      @tag6
+      @Validar_tela_de_busca
   Scenario: Validar tela de busca
   And Validar title "Tipos de Logradouro"
   And Filtro buscar "Ativos"
@@ -57,7 +57,7 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   And Validar Caminho do Menu "Cidades"
   And Validar ordenacao tela de busca
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQATipos de logradouro"
   And Clicar botao "Editar"
@@ -65,7 +65,7 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQATipos de logradouro"
   And Clicar botao "Editar"
@@ -74,14 +74,14 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQATipos de logradouro"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQATipos de logradouro"
   And Clicar botao "Editar"
@@ -89,14 +89,14 @@ Feature: Menu Administrativo Localizacao > Tipo de Logradouro
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQATipos de logradouro"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-       @tag12
+   @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Tipos de logradouro ""

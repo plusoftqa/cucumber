@@ -19,13 +19,13 @@
 @tag
 Feature: Menu Administrativo Pessoa > Cargo
 
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
 
-  @tag2
+  @Incluir_completo
   Scenario: Acessar Menu Pessoa, Incluir um Cargos
     And Acessar menu "Pessoa"
     And Acessar sub-menu "Cargos"
@@ -34,21 +34,21 @@ Feature: Menu Administrativo Pessoa > Cargo
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag4
-  Scenario: Incluir um time
+  @Incluir
+  Scenario: Incluir um Cargo
     And Clicar botao "Novo"
     And Digitar Cargos "02AQACargos"
     And checkbox Inativo
     And Clicar botao "Salvar e Novo"
     And Validar Alert de Sucesso
 
-  @tag5
-  Scenario: Incluir um Departamento
+  @Incluir
+  Scenario: Incluir um Cargo
     And Digitar Cargos "03AQACargos"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag6
+  @Validar_tela_de_busca
   Scenario: Validar tela de busca
     And Validar title "País"
     And Filtro buscar "Ativos"
@@ -57,7 +57,7 @@ Feature: Menu Administrativo Pessoa > Cargo
     And Validar Caminho do Menu "Cargo"
     And Validar ordenacao tela de busca
 
-  @tag7
+  @Editar
   Scenario: Editar registro
     And Digitar busca "03AQACargos"
     And Clicar botao "Editar"
@@ -65,7 +65,7 @@ Feature: Menu Administrativo Pessoa > Cargo
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag8
+  @Duplicar
   Scenario: Duplicar Registro
     And Digitar busca "02AQACargos"
     And Clicar botao "Editar"
@@ -74,14 +74,14 @@ Feature: Menu Administrativo Pessoa > Cargo
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
     And Digitar busca "05AQACargos"
     And Clicar botao "Excluir busca"
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
     And Digitar busca "04AQACargos"
     And Clicar botao "Editar"
@@ -89,14 +89,14 @@ Feature: Menu Administrativo Pessoa > Cargo
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
     And Digitar busca "02AQACargos"
     And Clicar botao "Excluir busca"
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag12
+  @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Cargos ""

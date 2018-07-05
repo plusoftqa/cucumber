@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Pessoa > Tipos de origem
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Pessoa, Incluir um Tipos de origem
     And Acessar menu "Pessoa"
     And Acessar sub-menu "Tipos de origem"
@@ -39,20 +39,20 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
     And Validar title "Cargo"
     
     
- @tag4
+ @Incluir
   Scenario: Incluir um Tipos de origem
   And Clicar botao "Novo"
   And Digitar Tipos de origem "02AQATipos de origem"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um Tipos de origem
   And Digitar Tipos de origem "03AQATipos de origem"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-    @tag6
+    @Validar_tela_de_busca
   Scenario: Validar tela de busca
     And Validar title "Tipos de origem"
     And Filtro buscar "Ativos"
@@ -61,7 +61,7 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
     And Validar Caminho do Menu "Tipos de origem"
     And Validar ordenacao tela de busca
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQATipos de origem"
   And Clicar botao "Editar"
@@ -69,7 +69,7 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQATipos de origem"
   And Clicar botao "Editar"
@@ -78,14 +78,14 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQATipos de origem"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQATipos de origem"
   And Clicar botao "Editar"
@@ -93,14 +93,14 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQATipos de origem"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-    @tag12
+    @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Tipos de origem ""

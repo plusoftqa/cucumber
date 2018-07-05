@@ -19,13 +19,13 @@
 
 @tag
 Feature: Menu Administrativo Pessoa > Formas de tratamento
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
     
-   @tag2
+   @Incluir_completo
    Scenario: Acessar Menu Pessoa, Incluir uma Formas de tratamento
     And Acessar menu "Pessoa"
     And Acessar sub-menu "Formas de tratamento"
@@ -37,20 +37,20 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
 
     
     
- @tag4
+ @Incluir
   Scenario: Incluir um uma Formas de tratamento
   And Clicar botao "Novo"
   And Digitar Formas de tratamento "02AQAFtratamento"
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
-  @tag5
+  @Incluir
   Scenario: Incluir um Departamento
   And Digitar Formas de tratamento "03AQAFtratamento"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-    @tag6
+    @Validar_tela_de_busca
   Scenario: Validar tela de busca
     And Validar title "Formas de tratamento"
     And Filtro buscar "Ativos"
@@ -59,7 +59,7 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
     And Validar Caminho do Menu "Formas de tratamento"
     And Validar ordenacao tela de busca
   
-    @tag7
+    @Editar
   Scenario: Editar registro
   And Digitar busca "03AQAFtratamento"
   And Clicar botao "Editar"
@@ -67,7 +67,7 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-   @tag8
+   @Duplicar
   Scenario: Duplicar Registro
   And Digitar busca "02AQAFtratamento"
   And Clicar botao "Editar"
@@ -76,14 +76,14 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "05AQAFtratamento"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
   And Digitar busca "04AQAFtratamento"
   And Clicar botao "Editar"
@@ -91,14 +91,14 @@ Feature: Menu Administrativo Pessoa > Formas de tratamento
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
   And Digitar busca "02AQAFtratamento"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-    @tag12
+   @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Formas de tratamento ""

@@ -19,13 +19,13 @@
 @tag
 Feature: Menu Administrativo Localizacao > Regioes
 
-  @tag1
+  @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
 
-  @tag2
+  @Incluir_completo
   Scenario: Incluir Regioes
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Regioes"
@@ -34,7 +34,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag4
+  @Incluir
   Scenario: Incluir regioes e Inativar
     And Clicar botao "Novo"
     And Digitar Regioes "02AQARegioes"
@@ -42,13 +42,13 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar e Novo"
     And Validar Alert de Sucesso
 
-  @tag5
+  @Incluir
   Scenario: Incluir regioes
     And Digitar Regioes "03AQARegioes"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag6
+  @Validar_tela_de_busca
   Scenario: Validar tela de busca
     And Validar title "Regiões"
     And Filtro buscar "Ativos"
@@ -57,7 +57,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Validar Caminho do Menu "Regiões"
     And Validar ordenacao tela de busca
 
-  @tag7
+  @Editar
   Scenario: Editar registro
     And Digitar busca "03AQARegioes"
     And Clicar botao "Editar"
@@ -65,7 +65,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag8
+  @Duplicar
   Scenario: Duplicar Registro
     And Digitar busca "02AQARegioes"
     And Clicar botao "Editar"
@@ -74,14 +74,14 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag9
+  @Excluir_Busca
   Scenario: Excluir registro na tela de busca
     And Digitar busca "05AQARegioes"
     And Clicar botao "Excluir busca"
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag10
+  @Excluir_Editar
   Scenario: Inativar Registro
     And Digitar busca "04AQARegioes"
     And Clicar botao "Editar"
@@ -89,7 +89,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @tag10
+  @Excluir_Editar
   Scenario: Excluir registro apos editar
     And Digitar busca "04AQARegioes"
     And Clicar botao "Editar"
@@ -97,14 +97,14 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag11
+  @Excluir_Busca
   Scenario: Excluir registro na busca
     And Digitar busca "02AQARegioes"
     And Clicar botao "Excluir busca"
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
 
-  @tag12
+  @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Regioes ""
