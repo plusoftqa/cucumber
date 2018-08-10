@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Usuarios > Times
+Feature: Menu Administrativo Localizacao > Paises
   @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -26,69 +26,70 @@ Feature: Menu Administrativo Usuarios > Times
     And Acessar modulo "Administrativo"
     
    @Incluir_completo
-   Scenario: Acessar Menu Pessoa, Incluir um time
-    And Acessar menu "Usuario"
-    And Acessar sub-menu "Times"
+   Scenario: Acessar Menu Atendimento, incluir registro
+    And Acessar menu "Atendimento"
+    And Acessar sub-menu "Midias"
     And Clicar botao "Novo"
-    And Incluir Time"01AQATIMES"
+    And Digitar Midia "01AQAMIDIAS"
+    And Select Como localizou "01AQACOMOLOCALIZOU"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso   
     
- 
-    
  @Incluir
-  Scenario: Incluir um time
+  Scenario: Incluir e inativar
   And Clicar botao "Novo"
-  And Digitar Time "02AQATIMES"
-  And Digitar E-mail "teste@teste.com.br"
+  And Digitar Midia "02AQAMIDIAS"
+  And Select Como localizou "01AQACOMOLOCALIZOU"
+  And checkbox Inativo
   And Clicar botao "Salvar e Novo"
   And Validar Alert de Sucesso
   
   @Incluir
-  Scenario: Incluir um time com destinatario
-  And Digitar Time "03AQATIMES"
-  And Digitar E-mail "teste@teste.com.br"
-  And checkbox Time destinatario
+  Scenario: Incluir
+  And Digitar Midia "03AQAMIDIAS"
+  And Select Como localizou "01AQACOMOLOCALIZOU"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
-    @Validar_tela_de_busca
+  @Validar_tela_de_busca
   Scenario: Validar tela de busca
-    And Validar title "Times"
-    And Filtro buscar "Ativos"
-    And Filtro buscar "Inativos"
-    And Filtro buscar "Ativos / Inativos"
-    And Validar Caminho do Menu "Cargo"
-    And Validar ordenacao tela de busca
+  And Validar title "Mídia"
+  And Filtro buscar "Ativos"
+  And Filtro buscar "Inativos"
+  And Filtro buscar "Ativos / Inativos"
+  And Validar Caminho do Menu "Mídia"
+  And Validar ordenacao tela de busca
+  
   
     @Editar
   Scenario: Editar registro
-  And Digitar busca "03AQATIMES"
+  And Digitar busca "03AQAMIDIAS"
   And Clicar botao "Editar"
-  And Digitar Time "04AQATIMES"
-  And checkbox Inativo 
+  And Digitar Midia "04AQAMIDIAS"
+  And Select Como localizou "01AQACOMOLOCALIZOU"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
    @Duplicar
   Scenario: Duplicar Registro
-  And Digitar busca "02AQATIMES"
+  And Digitar busca "02AQAMIDIAS"
   And Clicar botao "Editar"
   And Clicar botao "Duplicar"
-  And Digitar Time "05AQATIMES"
+  And Digitar Midia "05AQAMIDIAS"
+  And Select Como localizou "01AQACOMOLOCALIZOU"
   And Clicar botao "Salvar"
   And Validar Alert de Sucesso
   
   @Excluir_Busca
   Scenario: Excluir registro na busca
-  And Digitar busca "05AQATIMES"
+  And Digitar busca "05AQAMIDIAS"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
   @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQATIMES"
+  And Digitar busca "04AQAMIDIAS"
   And Clicar botao "Editar"
   And Clicar botao "Remover"
   And Clicar botao "confirmar"
@@ -96,7 +97,7 @@ Feature: Menu Administrativo Usuarios > Times
   
   @Excluir_Busca
   Scenario: Excluir registro na busca
-  And Digitar busca "02AQATIMES"
+  And Digitar busca "02AQAMIDIAS"
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
@@ -104,12 +105,11 @@ Feature: Menu Administrativo Usuarios > Times
     @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
-    And Digitar Time ""
+    And Digitar Midia ""
+    And Select Como localizou "01AQACOMOLOCALIZOU"
     And Clicar botao "Salvar"
     And Validar Alert de erro
-    And Clicar botao "Cancelar"
-    
-    @Associar
-    Scenario: Acionar um usuario e um time
-    
-    
+    And Digitar Midia "06AQAMIDIAS"
+    And Select Como localizou "Nenhuma opção selecionada"
+    And Clicar botao "Salvar"
+    And Validar Alert de erro

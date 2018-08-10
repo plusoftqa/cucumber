@@ -53,8 +53,13 @@ public class LocatorsUtilADM {
 	protected String pessoa_classificacoes = "a[href='/forms-v2/finder/CRM_PERSONCLASSIFICATION']";
 	protected String pessoa_portes = "a[href='/forms-v2/finder/CRM_PERSONCOMPANYSIZE']";
 	protected String pessoa_unificacao_cadastral = "a[href='/forms/plusoftcrm.person.forms.crm_person.cadastralduplicity/']";
-//	protected
-//	protected
+//	Atendimento
+	protected String atendimento = "li[data-menu-id='menu.admin.ticket']";
+	protected String atendimento_como_localizou = "a[href='/forms-v2/finder/CRM_TICKETHOWYOUKNOW']";
+	protected String atendimento_midias = "a[href='/forms-v2/finder/CRM_TICKETMEDIA']";
+	protected String atendimento_tipos_de_retorno = "a[href='/forms-v2/finder/CRM_TICKETPREFERENCERETURN']";
+	protected String atendimento_estados_de_animo = "a[href='/forms-v2/finder/CRM_TICKETMOOD']";
+	protected String atendimento_formas_de_contato = "a[href='/forms-v2/finder/CRM_CASEORIGIN']";
 //	protected
 //	protected
 //	protected

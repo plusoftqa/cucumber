@@ -57,6 +57,9 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Pessoa":
 			menu = pessoa;
 			break;
+		case "Atendimento":
+			menu = atendimento;
+			break;
 
 		}
 		
@@ -97,6 +100,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Seguranca":
 			submenu = usuario_seguranca;
 			break;
+			//MENU LOCALIZACAO
 		case "Paises":
 			submenu = localizacao_pais;
 			break;
@@ -115,6 +119,7 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Tipos de logradouro":
 			submenu = localizacao_tip_logra;
 			break;
+			//MENU PESSOA
 		case "Configuracoes de pessoa":
 			submenu = pessoa_configuracoes_pessoa;
 			break;
@@ -160,6 +165,23 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Unificacao Cadastral":
 			submenu = pessoa_unificacao_cadastral;
 			break;
+			//Menu Atendimento
+		case "Como localizou":
+			submenu = atendimento_como_localizou;
+			break;
+		case "Midias":
+			submenu = atendimento_midias;
+			break;
+		case "Tipos de retorno":
+			submenu = atendimento_tipos_de_retorno;
+			break;
+		case "Estado de animo":
+			submenu = atendimento_estados_de_animo;
+			break;
+		case "Formas de contato":
+			submenu = atendimento_formas_de_contato;
+			break;
+			
 		
 
 		}
@@ -323,11 +345,17 @@ public class PageUtilAdm extends LocatorsUtilADM{
 	
 	public void checkbox_Inativo() throws Exception {
 		
+		try {
 		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
         js.executeScript("document.getElementById('field-inactiverecord').click()");
 		
 
 		
+	}catch (Exception e) {
+		JavascriptExecutor js = (JavascriptExecutor) Util.driver;
+        js.executeScript("document.getElementById('field-inactive').click()");
+		
+	}
 	}
 
 
