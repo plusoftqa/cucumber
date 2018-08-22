@@ -16,17 +16,17 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 @tag
 Feature: Menu Administrativo Localizacao > Paises
+
   @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
     And Acessar modulo "Administrativo"
-    
-   @Incluir_completo
-   Scenario: Acessar Menu Localização, Incluir um Paise
+
+  @Incluir_completo
+  Scenario: Incluir registro completo
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Paises"
     And Clicar botao "Novo"
@@ -34,78 +34,81 @@ Feature: Menu Administrativo Localizacao > Paises
     And Digitar Abreviacao "QA"
     And Digitar Codigo do Pais "55"
     And Clicar botao "Salvar"
-    And Validar Alert de Sucesso   
-    
- @Incluir
-  Scenario: Incluir um pais e inativar
-  And Clicar botao "Novo"
-  And Digitar Paises "02AQAPAISES"
-  And Digitar Abreviacao "QA"
-  And checkbox Inativo
-  And Clicar botao "Salvar e Novo"
-  And Validar Alert de Sucesso
-  
+    And Validar Alert de Sucesso
+
+  @Incluir_inativar
+  Scenario: Incluir e inativar
+    And Clicar botao "Novo"
+    And Digitar Paises "02AQAPAISES"
+    And Digitar Abreviacao "QA"
+    And checkbox Inativo
+    And Clicar botao "Salvar e Novo"
+    And Validar Alert de Sucesso
+
   @Incluir
-  Scenario: Incluir um pais
-  And Digitar Paises "03AQAPAISES"
-  And Digitar Abreviacao "QA"
-  And Clicar botao "Salvar"
-  And Validar Alert de Sucesso
-  
+  Scenario: Incluir
+    And Digitar Paises "03AQAPAISES"
+    And Digitar Abreviacao "QA"
+    And Clicar botao "Salvar"
+    And Validar Alert de Sucesso
+
   @Validar_tela_de_busca
   Scenario: Validar tela de busca
-  And Validar title "País"
-  And Filtro buscar "Ativos"
-  And Filtro buscar "Inativos"
-  And Filtro buscar "Ativos / Inativos"
-  And Validar Caminho do Menu "Pais"
-  And Validar ordenacao tela de busca
-  
-  
-    @Editar
+    And Validar title "País"
+    And Filtro buscar "Ativos"
+    And Filtro buscar "Inativos"
+    And Filtro buscar "Ativos / Inativos"
+    And Validar Caminho do Menu "Pais"
+    And Validar ordenacao tela de busca
+
+  @Editar
   Scenario: Editar registro
-  And Digitar busca "03AQAPAISES"
-  And Clicar botao "Editar"
-  And Digitar Paises "04AQAPAISES"
-  And Digitar Abreviacao "QA"
-  And Clicar botao "Salvar"
-  And Validar Alert de Sucesso
-  
-   @Duplicar
+    And Digitar busca "03AQAPAISES"
+    And Clicar botao "Editar"
+    And Digitar Paises "04AQAPAISES"
+    And Digitar Abreviacao "QA"
+    And Clicar botao "Salvar"
+    And Validar Alert de Sucesso
+
+  @Duplicar
   Scenario: Duplicar Registro
-  And Digitar busca "02AQAPAISES"
-  And Clicar botao "Editar"
-  And Clicar botao "Duplicar"
-  And Digitar Paises "05AQAPAISES"
-  And Digitar Abreviacao "QA"
-  And Clicar botao "Salvar"
-  And Validar Alert de Sucesso
-  
+    And Digitar busca "02AQAPAISES"
+    And Clicar botao "Editar"
+    And Clicar botao "Duplicar"
+    And Digitar Paises "05AQAPAISES"
+    And Digitar Abreviacao "QA"
+    And Clicar botao "Salvar"
+    And Validar Alert de Sucesso
+
   @Excluir_Busca
   Scenario: Excluir registro na busca
-  And Digitar busca "05AQAPAISES"
-  And Clicar botao "Excluir busca"
-  And Clicar botao "confirmar"
-  And Validar Alert de Sucesso
-  
+    And Digitar busca "05AQAPAISES"
+    And Clicar botao "Excluir busca"
+    And Clicar botao "confirmar"
+    And Validar Alert de Sucesso
+
   @Excluir_Editar
   Scenario: Excluir apos clicar no botao editar
-  And Digitar busca "04AQAPAISES"
-  And Clicar botao "Editar"
-  And Clicar botao "Remover"
-  And Clicar botao "confirmar"
-  And Validar Alert de Sucesso
-  
+    And Digitar busca "04AQAPAISES"
+    And Clicar botao "Editar"
+    And Clicar botao "Remover"
+    And Clicar botao "confirmar"
+    And Validar Alert de Sucesso
+
   @Excluir_Busca
   Scenario: Excluir registro na busca
-  And Digitar busca "02AQAPAISES"
-  And Clicar botao "Excluir busca"
-  And Clicar botao "confirmar"
-  And Validar Alert de Sucesso
-  
-    @Validar_Alert_Erro
+    And Digitar busca "02AQAPAISES"
+    And Clicar botao "Excluir busca"
+    And Clicar botao "confirmar"
+    And Validar Alert de Sucesso
+
+  @Validar_Alert_Erro
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Paises ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+
+  @fechar_brownser
+  Scenario: Encerrar
+    Then fechar

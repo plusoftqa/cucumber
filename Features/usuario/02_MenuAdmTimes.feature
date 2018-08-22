@@ -112,4 +112,6 @@ Feature: Menu Administrativo Usuarios > Times
     @Associar
     Scenario: Acionar um usuario e um time
     
-    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

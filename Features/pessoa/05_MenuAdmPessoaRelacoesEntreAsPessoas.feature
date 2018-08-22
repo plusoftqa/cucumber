@@ -104,3 +104,7 @@ Feature: Menu Administrativo Pessoa > Relacoes entre as pessoas
     And Digitar Relacoes entre as pessoas ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

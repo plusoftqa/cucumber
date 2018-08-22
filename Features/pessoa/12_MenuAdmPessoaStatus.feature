@@ -103,3 +103,7 @@ Feature: Menu Administrativo Pessoa > Status
     And Digitar Status ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

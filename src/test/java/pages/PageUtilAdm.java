@@ -60,6 +60,13 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Atendimento":
 			menu = atendimento;
 			break;
+		case "Reclamacao":
+			menu = reclamacao;
+			break;
+		case "Forca de vendas":
+			menu = forcadeVendas;
+			break;
+
 
 		}
 		
@@ -181,9 +188,131 @@ public class PageUtilAdm extends LocatorsUtilADM{
 		case "Formas de contato":
 			submenu = atendimento_formas_de_contato;
 			break;
-			
-		
-
+			//MENU RECLAMACAO
+		case "Fabrica":
+			submenu = reclamcao_fabrica;
+			break;
+		case "Situacoes da embalagem":
+			submenu = reclamcao_situacao_embalagem;
+			break;
+		case "Prestadores de servico":
+			submenu = reclamacao_prestadores_de_serviço;
+			break;
+		case "Motivos do lote em branco":
+			submenu = reclamacao_motivos_de_lote_em_branco;
+			break;
+		case "Motivos de troca":
+			submenu = reclamacao_motivos_de_troca;
+			break;
+		case "Formas de ressarcimento":
+			submenu = reclamcao_formas_de_ressarcimento;
+			break;
+		case "Formas de envio de amostra":
+			submenu = reclamacao_formas_de_envio_de_amostra;
+			break;
+		case "Exposicoes do produto":
+			submenu = reclamacao_exposicoes_de_produto;
+			break;
+		case "Locais de compra":
+			submenu = reclamacao_locais_de_compra;
+			break;
+		case "Condicoes de uso":
+			submenu = reclamacao_condicoes_dE_uso;
+			break;
+		case "Tipos de terceiro":
+			submenu = reclamacao_tipos_de_terceiro;
+			break;
+		case "Justificativas do laudo":
+			submenu = reclamacao_justificativas_de_laudo;
+			break;
+		case "Laudos padrao":
+			submenu = reclamacao_laudo_padrao;
+			break;
+		case "Origens do problema":
+			submenu = reclamacao_origens_do_problema;
+			break;
+		case "Procedentes":
+			submenu = reclamacao_procedentes;
+			break;
+		case "Resultados do laudo":
+			submenu = reclamacao_resultados_do_laudo;
+			break;
+		case "Tipos de reembolso":
+			submenu = reclamacao_tipos_de_reembolso;
+			break;
+		case "Tipos de envio":
+			submenu = reclamacao_tipos_de_envio;
+			break;
+		//FORÇA DE VENDAS
+		case "Notificacoes":
+			submenu = forcadeVendas_notificacao;
+			break;
+		case "Tipos de negocio":
+			submenu = forcadeVendas_tipo_de_negocio;
+			break;
+		case "Unidades de negocio":
+			submenu = forcadeVendas_unidades_de_negocio;
+			break;
+		case "Produtos":
+			submenu = forcadeVendas_produto;
+			break;
+		case "Estagios de oportunidade":
+			submenu = forcadeVendas_estagios_de_oportunidades;
+			break;
+		case "Estagios de negociacao":
+			submenu = forcadeVendas_estagios_de_negociacao;
+			break;
+		case "Status SFA":
+			submenu = forcadeVendas_status;
+			break;
+		case "Objecoes":
+			submenu = forcadeVendas_objecoes;
+			break;
+		case "Tempos":
+			submenu = forcadeVendas_tempos;
+			break;
+		case "Orcamentos":
+			submenu = forcadeVendas_orcamentos;
+			break;
+		case "Origem das Oportunidades":
+			submenu = forcadeVendas_origem_das_oportunidades;
+			break;
+		case "Niveis de interesse":
+			submenu = forcadeVendas_niveis_de_interesse;
+			break;
+		case "Sucessos da oportunidade":
+			submenu = forcadeVendas_sucessos_da_oportunidade;
+			break;
+		case "Niveis decisorios":
+			submenu = forcadeVendas_niveis_decisorios;
+			break;
+		case "Necessidades":
+			submenu = forcadeVendas_necessidades;
+			break;
+		case "Parceiros":
+			submenu = forcadeVendas_parceiros;
+			break;
+		case "Autoridades":
+			submenu = forcadeVendas_autoridades;
+			break;
+		case "Papeis de parceiro":
+			submenu = forcadeVendas_papeis_de_parceiro;
+			break;
+		case "Concorrentes":
+			submenu = forcadeVendas_concorrentes;
+			break;
+		case "Tipos de despesas":
+			submenu = forcadeVendas_tipos_de_despesas;
+			break;
+		case "Transferencias de oportunidade":
+			submenu = forcadeVendas_transferencia_de_oportunidades;
+			break;
+		case "Transferencias de Contas":
+			submenu = forcadeVendas_transferencia_de_contas;
+			break;
+		case "Controles de metas":
+			submenu = forcadeVendas_controle_de_metas;
+			break;
 		}
 		
 		Util.Selecionar_Menu_e_Sub_menu_ADM(submenu);
@@ -529,8 +658,15 @@ public class PageUtilAdm extends LocatorsUtilADM{
 
 	public void validar_Alert_de_Sucesso() {
 		// TODO Auto-generated method stub
-		Assert.assertEquals(Msg_sucesso, Msg_sucesso );
-
+		try {
+			Assert.assertEquals(Msg_sucesso, Msg_sucesso );
+			Util.driver.findElement(By.xpath(Msg_sucesso)).click();
+		} catch (Exception e) {
+			
+			
+		}
+		
+		
 		
 		
 	}
@@ -546,5 +682,11 @@ public class PageUtilAdm extends LocatorsUtilADM{
 			
 	
 		
+	}
+
+
+	public void fechar() {
+		// TODO Auto-generated method stub
+		Util.driver.quit();
 	}
 }

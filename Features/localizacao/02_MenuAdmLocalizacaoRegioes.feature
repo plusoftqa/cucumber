@@ -26,7 +26,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Acessar modulo "Administrativo"
 
   @Incluir_completo
-  Scenario: Incluir Regioes
+  Scenario: Incluir registro completo
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Regioes"
     And Clicar botao "Novo"
@@ -34,8 +34,8 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @Incluir
-  Scenario: Incluir regioes e Inativar
+  @Incluir_inativar
+  Scenario: Incluir e inativar
     And Clicar botao "Novo"
     And Digitar Regioes "02AQARegioes"
     And checkbox Inativo
@@ -43,7 +43,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Validar Alert de Sucesso
 
   @Incluir
-  Scenario: Incluir regioes
+  Scenario: Incluir
     And Digitar Regioes "03AQARegioes"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
@@ -110,3 +110,7 @@ Feature: Menu Administrativo Localizacao > Regioes
     And Digitar Regioes ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+
+  @fechar_brownser
+  Scenario: Encerrar
+    Then fechar

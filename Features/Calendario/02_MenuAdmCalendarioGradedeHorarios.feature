@@ -94,7 +94,9 @@ Feature: Menu Administrativo Calendario Grade de horarios
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
   
-  
+      @fechar_brownser
+    Scenario: Encerrar
+    Then fechar
 
   
   

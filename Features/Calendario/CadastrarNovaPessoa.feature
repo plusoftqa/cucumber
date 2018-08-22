@@ -38,3 +38,7 @@ Feature: Cadastrar Nova Pessoa
     And Criar um follow up
     And Salvar ocorrencia
     And Verifica codigo de ocorrencia
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

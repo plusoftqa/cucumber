@@ -105,3 +105,7 @@ Feature: Menu Administrativo Usuario > Grupo de usuarios
     And Clicar botao "Excluirv1"
     And Clicar botao "confirmar"
     And Validar Alert de Sucesso
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

@@ -26,7 +26,7 @@ Feature: Menu Administrativo Localizacao > Paises
     And Acessar modulo "Administrativo"
     
    @Incluir_completo
-   Scenario: Acessar Menu Atendimento, incluir registro como localizou
+   Scenario: Incluir registro completo como localizou
     And Acessar menu "Atendimento"
     And Acessar sub-menu "Como localizou"
     And Clicar botao "Novo"
@@ -103,3 +103,7 @@ Feature: Menu Administrativo Localizacao > Paises
     And Digitar Como localizou ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+    @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

@@ -99,7 +99,9 @@ Feature: Menu Administrativo Calendario Feriado
   
 
   
-  
+      @fechar_brownser
+    Scenario: Encerrar
+    Then fechar
   
   
    

@@ -106,3 +106,7 @@ Feature: Menu Administrativo Pessoa > Segmentos empresarial
     And Digitar Segmentos empresarial ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

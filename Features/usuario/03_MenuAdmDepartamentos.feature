@@ -90,3 +90,7 @@ Feature: Menu Administrativo Usuarios > Departamentos
   And Clicar botao "Excluir busca"
   And Clicar botao "confirmar"
   And Validar Alert de Sucesso
+  
+      @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

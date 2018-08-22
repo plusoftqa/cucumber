@@ -26,28 +26,29 @@ Feature: Menu Administrativo Localizacao > Cidades
     And Acessar modulo "Administrativo"
 
   @Incluir_completo
-  Scenario: Acessar Menu Localização, Incluir um Cidades
+  Scenario: Incluir registro completo
     And Acessar menu "Localizacao"
     And Acessar sub-menu "Cidades"
     And Clicar botao "Novo"
-    And Digitar Cidades "01AQACidades"
-    And Selecionar Estado "01AQAEstados"
     And Selecionar Pais "01AQAPAISES"
+    And Selecionar Estado "01AQAEstados"    
+    And Digitar Cidades "01AQACidades"
     And Digitar Codigo da cidade "11"
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
-  @Incluir
-  Scenario: Incluir uma Cidade
+  @Incluir_inativar
+  Scenario: Incluir e inativar
     And Clicar botao "Novo"
     And Digitar Cidades "02AQACidades"
-    And Selecionar Estado "01AQAEstados"
     And Selecionar Pais "01AQAPAISES"
+    And Selecionar Estado "01AQAEstados"  
+    And checkbox Inativo
     And Clicar botao "Salvar e Novo"
     And Validar Alert de Sucesso
 
   @Incluir
-  Scenario: Incluir uma Cidade
+  Scenario: Incluir
     And Digitar Cidades "03AQACidades"
     And Selecionar Pais "01AQAPAISES"
     And Selecionar Estado "01AQAEstados"
@@ -68,8 +69,8 @@ Feature: Menu Administrativo Localizacao > Cidades
     And Digitar busca "03AQACidades"
     And Clicar botao "Editar"
     And Digitar Cidades "04AQACidades"
-    And Selecionar Estado "01AQAEstados"
-    And Selecionar Pais "01AQAPAISES"
+		And Selecionar Pais "01AQAPAISES"
+    And Selecionar Estado "01AQAEstados"  
     And Clicar botao "Salvar"
     And Validar Alert de Sucesso
 
@@ -110,5 +111,18 @@ Feature: Menu Administrativo Localizacao > Cidades
   Scenario: Validar Alert de erro
     And Clicar botao "Novo"
     And Digitar Cidades ""
+    And Selecionar Pais "01AQAPAISES"
+    And Selecionar Estado "01AQAEstados"  
     And Clicar botao "Salvar"
     And Validar Alert de erro
+		And Digitar Cidades "QA"
+    And Selecionar Pais "Nenhuma opção selecionada"
+    And Clicar botao "Salvar"
+    And Validar Alert de erro
+    And Selecionar Pais "01AQAPAISES"
+    And Selecionar Estado "Nenhuma opção selecionada"  
+    And Clicar botao "Salvar"
+    And Validar Alert de erro
+  @fechar_brownser
+  Scenario: Encerrar
+    Then fechar

@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Menu Administrativo Atendimento > Estado de animo
+Feature: Menu Administrativo Reclamacao > Fabrica
   @Acesso_sistema
   Scenario: Logar acessar Modulo Administrativo
     Given Abrir brownser
@@ -26,7 +26,7 @@ Feature: Menu Administrativo Atendimento > Estado de animo
     And Acessar modulo "Administrativo"
     
    @Incluir_completo
-   Scenario: Acessar Menu Atendimento, incluir registro 
+   Scenario: Incluir registro completo 
     And Acessar menu "Atendimento"
     And Acessar sub-menu "Estado de animo"
     And Clicar botao "Novo"
@@ -103,3 +103,7 @@ Feature: Menu Administrativo Atendimento > Estado de animo
     And Digitar Estado de animo ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

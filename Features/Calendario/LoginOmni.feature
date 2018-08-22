@@ -23,3 +23,7 @@ Feature: Login Omni
   Scenario: Acessar Omni
     Given Abrir brownser
     And Acessar Sistema com o usuario "automacaoqa" e senha "Testeqa123"
+
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

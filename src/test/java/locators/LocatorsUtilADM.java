@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class LocatorsUtilADM {
 	// validar msg
 	protected String Msg_Erro = "div[class='ui-notification ng-scope error clickable']";
-	protected String Msg_sucesso = "//*[@class='ui-notification ng-scope success clickable']";
+	protected String Msg_sucesso = "*//div[@class='ui-notification ng-scope success clickable']";
 	
 	
 	//modulos
@@ -60,71 +60,71 @@ public class LocatorsUtilADM {
 	protected String atendimento_tipos_de_retorno = "a[href='/forms-v2/finder/CRM_TICKETPREFERENCERETURN']";
 	protected String atendimento_estados_de_animo = "a[href='/forms-v2/finder/CRM_TICKETMOOD']";
 	protected String atendimento_formas_de_contato = "a[href='/forms-v2/finder/CRM_CASEORIGIN']";
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
-//	protected
+//	RECLAMAÇÃO
+	protected String reclamacao = "li[data-menu-id='menu.admin.lot']";
+	protected String reclamcao_fabrica = "a[href='/forms-v2/finder/CRM_PRODFACTORY']";
+	protected String reclamcao_situacao_embalagem = "a[href='/forms-v2/finder/CRM_PRODPACKAGESITUATION']";
+	protected String reclamacao_prestadores_de_serviço = "a[href='/forms-v2/finder/CRM_PRODSERVICEPROVIDER']";
+	protected String reclamacao_motivos_de_lote_em_branco = "a[href='/forms-v2/finder/CRM_PRODLOTUNFILLEDREASON']";
+	protected String reclamacao_motivos_de_troca = "a[href='/forms-v2/finder/CRM_PRODCHANGEREASON']";
+	protected String reclamcao_formas_de_ressarcimento = "a[href='/forms-v2/finder/CRM_PRODREPAYMENTFORM']";
+	protected String reclamacao_formas_de_envio_de_amostra = "a[href='/forms-v2/finder/CRM_PRODSAMPLESUBMISSION']";
+	protected String reclamacao_exposicoes_de_produto = "a[href='/forms-v2/finder/CRM_PRODDISPLAYED']";
+	protected String reclamacao_locais_de_compra = "a[href='/forms-v2/finder/CRM_PRODPURCHASEPLACE']";
+	protected String reclamacao_condicoes_dE_uso = "a[href='/forms-v2/finder/CRM_PRODUSECONDITION']";
+	protected String reclamacao_tipos_de_terceiro = "a[href='/forms-v2/finder/CRM_CASETHIRDPARTY']";
+	protected String reclamacao_justificativas_de_laudo = "a[href='/forms-v2/finder/CRM_PRODREPORTJUSTIFICATION']";
+	protected String reclamacao_laudo_padrao = "a[href='/forms-v2/finder/CRM_PRODREPORTDEFAULT']";
+	protected String reclamacao_origens_do_problema = "a[href='/forms-v2/finder/CRM_PRODSOURCEPROBLEM']";
+	protected String reclamacao_procedentes = "a[href='/forms-v2/finder/CRM_PRODREPORTPROCEEDS']";
+	protected String reclamacao_resultados_do_laudo = "a[href='/forms-v2/finder/CRM_PRODREPORTRESULT']";
+	protected String reclamacao_tipos_de_reembolso = "a[href='/forms-v2/finder/CRM_CASEREPAYTYPE']";
+	protected String reclamacao_tipos_de_envio = "a[href='/forms-v2/finder/CRM_CASESAMPLERSENDTYPE']";
+//	FORÇA DE VENDAS
+	protected String forcadeVendas = "li[data-menu-id='menu.admin.sfa']";
+	protected String forcadeVendas_notificacao = "a[href='/forms-v2/finder/CRM_SFANOTIFICATION']";
+	protected String forcadeVendas_tipo_de_negocio = "a[href='/forms-v2/finder/CRM_OPORTUNITYBUSINESS']";
+	protected String forcadeVendas_unidades_de_negocio = "a[href='/forms-v2/finder/CRM_BUSINESSUNIT']";
+	protected String forcadeVendas_produto = "a[href='/forms-v2/finder/CRM_OPORTUNITYPRODUCT']";
+	protected String forcadeVendas_estagios_de_oportunidades = "a[href='/forms-v2/finder/CRM_OPORTUNITYSTAGE']";
+	protected String forcadeVendas_estagios_de_negociacao = "a[href='/forms-v2/finder/CRM_BUSINESSSTAGE']";
+	protected String forcadeVendas_status = "a[href='/forms-v2/finder/CRM_OPORTUNITYSTATUS']";
+	protected String forcadeVendas_objecoes = "a[href='/forms-v2/finder/CRM_OPORTUNITYOBJECTION']";
+	protected String forcadeVendas_tempos = "a[href='/forms-v2/finder/CRM_OPORTUNITYFORECAST']";
+	protected String forcadeVendas_orcamentos = "a[href='/forms-v2/finder/CRM_OPORTUNITYBUDGET']";
+	protected String forcadeVendas_origem_das_oportunidades = "a[href='/forms-v2/finder/CRM_OPORTUNITYORIGIN']";
+	protected String forcadeVendas_niveis_de_interesse = "a[href='/forms-v2/finder/CRM_OPORTUNITYINTEREST']";
+	protected String forcadeVendas_sucessos_da_oportunidade = "a[href='/forms-v2/finder/CRM_OPPORTUNITYSUCCESSREASON']";
+	protected String forcadeVendas_niveis_decisorios = "a[href='/forms-v2/finder/CRM_CONTACTROLE']";
+	protected String forcadeVendas_necessidades = "a[href='/forms-v2/finder/CRM_OPPORTUNITYNEED']";
+	protected String forcadeVendas_parceiros = "a[href='/forms-v2/finder/CRM_PARTNER']";
+	protected String forcadeVendas_autoridades = "a[href='/forms-v2/finder/CRM_OPPORTUNITYAUTHORITY']";
+	protected String forcadeVendas_papeis_de_parceiro = "a[href='/forms-v2/finder/CRM_PARTNERROLE']";
+	protected String forcadeVendas_concorrentes = "a[href='/forms-v2/finder/CRM_COMPETITOR']";
+	protected String forcadeVendas_tipos_de_despesas= "a[href='/forms-v2/finder/CRM_EVENTCOSTTYPE']";
+	protected String forcadeVendas_transferencia_de_oportunidades = "a[href='/forms/plusoftcrm.sfa.transfers.opportunity/']";
+	protected String forcadeVendas_transferencia_de_contas = "a[href='/forms/plusoftcrm.sfa.transfers.person/']";
+	protected String forcadeVendas_controle_de_metas = "a[href='/forms-v2/finder/CRM_SALESGOALS']";
+//	OCORRENCIA 
+	protected String ocorrencia = "li[data-menu-id='menu.admin.case']";
+	protected String ocorrencias_configuracoes_de_ocorrencia = "a[href='/forms-v2/finder/CRM_CONFIGCASE']";
+	protected String ocorrencias_grau_de_satisfacao = "a[href='/forms-v2/finder/CRM_CASESATISFACTION']";
+	protected String ocorrencias_classificacoes = "a[href='/forms-v2/finder/CRM_CASECLASSIFICATION']";
+	protected String ocorrencias_prioridades = "a[href='/forms-v2/finder/CRM_CASEPRIORITY']";
+	protected String ocorrencias_status = "a[href='/forms-v2/finder/CRM_CASESTATUS']";
+	protected String ocorrencias_textos_padrao = "a[href='/forms-v2/finder/CRM_CASEDEFAULTDESCRIPTION']";
+	protected String ocorrencias_eventos_de_followUp = "a[href='/forms-v2/finder/CRM_CASEFOLLOWUPTYPE']";
+	protected String ocorrencias_motivos_de_encerramento = "a[href='/forms-v2/finder/CRM_CASECONCLUSIONTYPE']";
+	protected String ocorrencias_categorias_de_assunto = "a[href='/forms-v2/finder/CRM_CASEREASONCATEGORY']";
+	protected String ocorrencias_grupos_de_assunto = "a[href='/forms-v2/finder/CRM_CASEREASONGROUP']";
+	protected String ocorrencias_assuntos = "a[href='/forms/plusoftcrm.case.forms.crm_casereason.list/']";
+	protected String ocorrencias_tipos_de_ocorrencia = "a[href='/forms-v2/finder/CRM_CASETYPEMAIN']";
+	protected String ocorrencias_grupo_de_tipo_de_ocorrencia = "a[href='/forms/plusoftcrm.case.forms.crm_casetypegroup.list/']";
+	protected String ocorrencias_ocorrencia = "a[href='/forms/plusoftcrm.case.forms.crm_casetype.list/']";
+	protected String ocorrencias_grupos_de_atendimento = "a[href='/forms-v2/finder/CRM_CASETYPEREASONGROUP']";
+	protected String ocorrencias_motivos_de_ocorrencia = "a[href='/forms/plusoftcrm.case.forms.crm_casetypereason.list/']";
+	protected String ocorrencias_motivos_de_congelamento = "a[href='/forms-v2/finder/CRM_CASEFREEZEREASON']";
+	protected String ocorrencias_terceiros = "a[href='/forms-v2/finder/CRM_CASETHIRDPARTTYPE']";
 //	protected
 //	protected
 //	protected

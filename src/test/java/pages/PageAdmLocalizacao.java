@@ -2,10 +2,10 @@ package pages;
 
 import executar.Screenshot;
 import executar.Util;
-import locators.LocatoresAdmLocalizacao;
+import locators.LocatorsAdmLocalizacao;
 
 
-public class PageAdmLocalizacao extends LocatoresAdmLocalizacao{
+public class PageAdmLocalizacao extends LocatorsAdmLocalizacao{
 	Util u = new Util();
 	Screenshot s = new Screenshot();
 	public void digitar_Paises(String paises) {

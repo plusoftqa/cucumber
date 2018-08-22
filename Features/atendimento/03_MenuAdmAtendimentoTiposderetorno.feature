@@ -26,7 +26,7 @@ Feature: Menu Administrativo Atendimento > Tipos de retorno
     And Acessar modulo "Administrativo"
     
    @Incluir_completo
-   Scenario: Acessar Menu Atendimento, incluir registro 
+   Scenario: Incluir registro completo 
     And Acessar menu "Atendimento"
     And Acessar sub-menu "Tipos de retorno"
     And Clicar botao "Novo"
@@ -113,3 +113,7 @@ Feature: Menu Administrativo Atendimento > Tipos de retorno
     And Select Forma de retorno "Nenhuma opção selecionada"
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

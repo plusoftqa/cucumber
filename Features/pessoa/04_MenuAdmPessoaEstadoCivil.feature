@@ -103,4 +103,8 @@ Feature: Menu Administrativo Pessoa > Estado Civil
     And Digitar Estado Civil ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar
   

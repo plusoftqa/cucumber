@@ -26,7 +26,7 @@ Feature: Menu Administrativo Atendimento > Formas de contato
     And Acessar modulo "Administrativo"
     
    @Incluir_completo
-   Scenario: Acessar Menu Atendimento, incluir registro 
+   Scenario: Incluir registro completo 
     And Acessar menu "Atendimento"
     And Acessar sub-menu "Formas de contato"
     And Clicar botao "Novo"
@@ -103,3 +103,7 @@ Feature: Menu Administrativo Atendimento > Formas de contato
     And Digitar Formas de contato ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import executar.Util;
 import pages.PageAdmAtendimento;
-import pages.PageAdmLocalizacao;
 
 public class StepAdmAtendimento {
 	Util u = new Util();

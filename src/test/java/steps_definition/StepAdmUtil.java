@@ -118,6 +118,11 @@ public class StepAdmUtil {
 	    util.validar_ordenacao_tela_de_busca();
 	}
 	  
+	@Given("^fechar$")
+	public void fechar() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    util.fechar();
+	}
 	
 	  
 

@@ -107,3 +107,7 @@ Feature: Menu Administrativo Pessoa > Tipos de publico
     And Digitar Tipos de publico ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

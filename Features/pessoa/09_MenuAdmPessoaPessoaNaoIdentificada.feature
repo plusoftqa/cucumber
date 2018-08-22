@@ -109,3 +109,7 @@ Feature: Menu Administrativo Pessoa > Pessoas nao identificadas
     And Digitar Pessoas nao identificadas ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar

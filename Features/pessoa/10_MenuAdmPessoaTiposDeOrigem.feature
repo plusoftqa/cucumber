@@ -106,3 +106,7 @@ Feature: Menu Administrativo Pessoa > Tipos de origem
     And Digitar Tipos de origem ""
     And Clicar botao "Salvar"
     And Validar Alert de erro
+    
+        @fechar_brownser
+    Scenario: Encerrar
+    Then fechar
